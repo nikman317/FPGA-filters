@@ -1,0 +1,349 @@
+Simulator report for filterLF
+Wed Dec 26 12:14:33 2018
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|altsyncram_q681:altsyncram2|ALTSYNCRAM
+  6. Coverage Summary
+  7. Complete 1/0-Value Coverage
+  8. Missing 1-Value Coverage
+  9. Missing 0-Value Coverage
+ 10. Simulator INI Usage
+ 11. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------+
+; Simulator Summary                           ;
++-----------------------------+---------------+
+; Type                        ; Value         ;
++-----------------------------+---------------+
+; Simulation Start Time       ; 0 ps          ;
+; Simulation End Time         ; 5.0 us        ;
+; Simulation Netlist Size     ; 86 nodes      ;
+; Simulation Coverage         ;      63.79 %  ;
+; Total Number of Transitions ; 2664          ;
+; Simulation Breakpoints      ; 0             ;
+; Family                      ; Cyclone II    ;
+; Device                      ; EP2C20AF484A7 ;
++-----------------------------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------------------------------------------------+
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|altsyncram_q681:altsyncram2|ALTSYNCRAM ;
++--------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II to view the memory report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      63.79 % ;
+; Total nodes checked                                 ; 86           ;
+; Total output ports checked                          ; 116          ;
+; Total output ports with complete 1/0-value coverage ; 74           ;
+; Total output ports with no 1/0-value coverage       ; 16           ;
+; Total output ports with no 1-value coverage         ; 19           ;
+; Total output ports with no 0-value coverage         ; 39           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                                                        ;
++----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                      ; Output Port Name                                                                                               ; Output Port Type ;
++----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+------------------+
+; |filterLF|sum[3]                                                                                               ; |filterLF|sum[3]                                                                                               ; regout           ;
+; |filterLF|sum[4]                                                                                               ; |filterLF|sum[4]                                                                                               ; regout           ;
+; |filterLF|sum[5]                                                                                               ; |filterLF|sum[5]                                                                                               ; regout           ;
+; |filterLF|sum[8]                                                                                               ; |filterLF|sum[8]                                                                                               ; regout           ;
+; |filterLF|sum[9]                                                                                               ; |filterLF|sum[9]                                                                                               ; regout           ;
+; |filterLF|sum[2]                                                                                               ; |filterLF|sum[2]                                                                                               ; regout           ;
+; |filterLF|sum[1]                                                                                               ; |filterLF|sum[1]                                                                                               ; regout           ;
+; |filterLF|op_1~452                                                                                             ; |filterLF|op_1~452                                                                                             ; combout          ;
+; |filterLF|op_1~452                                                                                             ; |filterLF|op_1~453                                                                                             ; cout             ;
+; |filterLF|op_1~454                                                                                             ; |filterLF|op_1~454                                                                                             ; combout          ;
+; |filterLF|op_1~454                                                                                             ; |filterLF|op_1~455                                                                                             ; cout             ;
+; |filterLF|op_1~456                                                                                             ; |filterLF|op_1~456                                                                                             ; combout          ;
+; |filterLF|op_1~456                                                                                             ; |filterLF|op_1~457                                                                                             ; cout             ;
+; |filterLF|sum[1]~97                                                                                            ; |filterLF|sum[1]~97                                                                                            ; combout          ;
+; |filterLF|sum[1]~97                                                                                            ; |filterLF|sum[1]~98                                                                                            ; cout             ;
+; |filterLF|sum[2]~99                                                                                            ; |filterLF|sum[2]~99                                                                                            ; combout          ;
+; |filterLF|sum[2]~99                                                                                            ; |filterLF|sum[2]~100                                                                                           ; cout             ;
+; |filterLF|sum[3]~101                                                                                           ; |filterLF|sum[3]~101                                                                                           ; combout          ;
+; |filterLF|sum[3]~101                                                                                           ; |filterLF|sum[3]~102                                                                                           ; cout             ;
+; |filterLF|op_1~458                                                                                             ; |filterLF|op_1~458                                                                                             ; combout          ;
+; |filterLF|op_1~458                                                                                             ; |filterLF|op_1~459                                                                                             ; cout             ;
+; |filterLF|sum[4]~103                                                                                           ; |filterLF|sum[4]~103                                                                                           ; combout          ;
+; |filterLF|sum[4]~103                                                                                           ; |filterLF|sum[4]~104                                                                                           ; cout             ;
+; |filterLF|op_1~460                                                                                             ; |filterLF|op_1~460                                                                                             ; combout          ;
+; |filterLF|op_1~460                                                                                             ; |filterLF|op_1~461                                                                                             ; cout             ;
+; |filterLF|sum[5]~105                                                                                           ; |filterLF|sum[5]~105                                                                                           ; combout          ;
+; |filterLF|sum[5]~105                                                                                           ; |filterLF|sum[5]~106                                                                                           ; cout             ;
+; |filterLF|op_1~462                                                                                             ; |filterLF|op_1~462                                                                                             ; combout          ;
+; |filterLF|sum[6]~107                                                                                           ; |filterLF|sum[6]~107                                                                                           ; combout          ;
+; |filterLF|op_1~464                                                                                             ; |filterLF|op_1~464                                                                                             ; combout          ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|altsyncram_q681:altsyncram2|ram_block3a0 ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|altsyncram_q681:altsyncram2|q_b[5]       ; portbdataout5    ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|altsyncram_q681:altsyncram2|ram_block3a0 ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|altsyncram_q681:altsyncram2|q_b[6]       ; portbdataout6    ;
+; |filterLF|sum[7]~109                                                                                           ; |filterLF|sum[7]~109                                                                                           ; combout          ;
+; |filterLF|op_1~466                                                                                             ; |filterLF|op_1~466                                                                                             ; combout          ;
+; |filterLF|op_1~466                                                                                             ; |filterLF|op_1~467                                                                                             ; cout             ;
+; |filterLF|sum[8]~111                                                                                           ; |filterLF|sum[8]~111                                                                                           ; combout          ;
+; |filterLF|op_1~468                                                                                             ; |filterLF|op_1~468                                                                                             ; combout          ;
+; |filterLF|op_1~468                                                                                             ; |filterLF|op_1~469                                                                                             ; cout             ;
+; |filterLF|sum[9]~113                                                                                           ; |filterLF|sum[9]~113                                                                                           ; combout          ;
+; |filterLF|op_1~470                                                                                             ; |filterLF|op_1~470                                                                                             ; combout          ;
+; |filterLF|sum[10]~115                                                                                          ; |filterLF|sum[10]~115                                                                                          ; combout          ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|counter_reg_bit4a[0]      ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|current_reg_q_w[0]        ; regout           ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|counter_reg_bit4a[1]      ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|current_reg_q_w[1]        ; regout           ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|counter_reg_bit4a[2]      ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|current_reg_q_w[2]        ; regout           ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|add_sub5_result_int[0]~8  ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|add_sub5_result_int[0]~8  ; combout          ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|add_sub5_result_int[0]~8  ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|add_sub5_result_int[0]~9  ; cout             ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|add_sub5_result_int[1]~10 ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|add_sub5_result_int[1]~10 ; combout          ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|add_sub5_result_int[1]~10 ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|add_sub5_result_int[1]~11 ; cout             ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|add_sub5_result_int[2]~12 ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|add_sub5_result_int[2]~12 ; combout          ;
+; |filterLF|output_trigger[0]                                                                                    ; |filterLF|output_trigger[0]                                                                                    ; regout           ;
+; |filterLF|output_trigger[1]                                                                                    ; |filterLF|output_trigger[1]                                                                                    ; regout           ;
+; |filterLF|output_trigger[2]                                                                                    ; |filterLF|output_trigger[2]                                                                                    ; regout           ;
+; |filterLF|output_trigger[5]                                                                                    ; |filterLF|output_trigger[5]                                                                                    ; regout           ;
+; |filterLF|output_trigger[6]                                                                                    ; |filterLF|output_trigger[6]                                                                                    ; regout           ;
+; |filterLF|shift_reg[0][2]                                                                                      ; |filterLF|shift_reg[0][2]                                                                                      ; regout           ;
+; |filterLF|shift_reg[0][1]                                                                                      ; |filterLF|shift_reg[0][1]                                                                                      ; regout           ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|trigger_mux_w[0]~76       ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|trigger_mux_w[0]~76       ; combout          ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|trigger_mux_w[0]~2        ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|trigger_mux_w[0]~2        ; combout          ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|cout_actual               ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|cout_actual               ; combout          ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|trigger_mux_w[1]~1        ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|trigger_mux_w[1]~1        ; combout          ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|trigger_mux_w[2]~0        ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|trigger_mux_w[2]~0        ; combout          ;
+; |filterLF|outputData[0]                                                                                        ; |filterLF|outputData[0]                                                                                        ; padio            ;
+; |filterLF|outputData[1]                                                                                        ; |filterLF|outputData[1]                                                                                        ; padio            ;
+; |filterLF|outputData[2]                                                                                        ; |filterLF|outputData[2]                                                                                        ; padio            ;
+; |filterLF|outputData[5]                                                                                        ; |filterLF|outputData[5]                                                                                        ; padio            ;
+; |filterLF|outputData[6]                                                                                        ; |filterLF|outputData[6]                                                                                        ; padio            ;
+; |filterLF|clock                                                                                                ; |filterLF|clock~corein                                                                                         ; combout          ;
+; |filterLF|inputData[2]                                                                                         ; |filterLF|inputData[2]~corein                                                                                  ; combout          ;
+; |filterLF|inputData[1]                                                                                         ; |filterLF|inputData[1]~corein                                                                                  ; combout          ;
+; |filterLF|clock~clkctrl                                                                                        ; |filterLF|clock~clkctrl                                                                                        ; outclk           ;
+; |filterLF|output_trigger[0]~feeder                                                                             ; |filterLF|output_trigger[0]~feeder                                                                             ; combout          ;
+; |filterLF|output_trigger[2]~feeder                                                                             ; |filterLF|output_trigger[2]~feeder                                                                             ; combout          ;
+; |filterLF|shift_reg[0][2]~feeder                                                                               ; |filterLF|shift_reg[0][2]~feeder                                                                               ; combout          ;
+; |filterLF|shift_reg[0][1]~feeder                                                                               ; |filterLF|shift_reg[0][1]~feeder                                                                               ; combout          ;
++----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                                                           ;
++----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                      ; Output Port Name                                                                                               ; Output Port Type ;
++----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+------------------+
+; |filterLF|sum[0]                                                                                               ; |filterLF|sum[0]                                                                                               ; regout           ;
+; |filterLF|op_1~450                                                                                             ; |filterLF|op_1~450                                                                                             ; combout          ;
+; |filterLF|op_1~450                                                                                             ; |filterLF|op_1~451                                                                                             ; cout             ;
+; |filterLF|sum[0]~95                                                                                            ; |filterLF|sum[0]~95                                                                                            ; combout          ;
+; |filterLF|sum[0]~95                                                                                            ; |filterLF|sum[0]~96                                                                                            ; cout             ;
+; |filterLF|sum[6]~107                                                                                           ; |filterLF|sum[6]~108                                                                                           ; cout             ;
+; |filterLF|op_1~464                                                                                             ; |filterLF|op_1~465                                                                                             ; cout             ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|altsyncram_q681:altsyncram2|ram_block3a0 ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|altsyncram_q681:altsyncram2|q_b[7]       ; portbdataout7    ;
+; |filterLF|sum[8]~111                                                                                           ; |filterLF|sum[8]~112                                                                                           ; cout             ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|add_sub5_result_int[2]~12 ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|add_sub5_result_int[2]~13 ; cout             ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|add_sub5_result_int[3]~14 ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|add_sub5_result_int[3]~14 ; combout          ;
+; |filterLF|shift_reg[0][0]                                                                                      ; |filterLF|shift_reg[0][0]                                                                                      ; regout           ;
+; |filterLF|inputData[3]                                                                                         ; |filterLF|inputData[3]~corein                                                                                  ; combout          ;
+; |filterLF|inputData[0]                                                                                         ; |filterLF|inputData[0]~corein                                                                                  ; combout          ;
+; |filterLF|inputData[4]                                                                                         ; |filterLF|inputData[4]~corein                                                                                  ; combout          ;
+; |filterLF|inputData[5]                                                                                         ; |filterLF|inputData[5]~corein                                                                                  ; combout          ;
+; |filterLF|inputData[6]                                                                                         ; |filterLF|inputData[6]~corein                                                                                  ; combout          ;
+; |filterLF|inputData[7]                                                                                         ; |filterLF|inputData[7]~corein                                                                                  ; combout          ;
+; |filterLF|shift_reg[0][0]~feeder                                                                               ; |filterLF|shift_reg[0][0]~feeder                                                                               ; combout          ;
++----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                                                           ;
++----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                      ; Output Port Name                                                                                               ; Output Port Type ;
++----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+------------------+
+; |filterLF|sum[6]                                                                                               ; |filterLF|sum[6]                                                                                               ; regout           ;
+; |filterLF|sum[7]                                                                                               ; |filterLF|sum[7]                                                                                               ; regout           ;
+; |filterLF|sum[10]                                                                                              ; |filterLF|sum[10]                                                                                              ; regout           ;
+; |filterLF|sum[0]                                                                                               ; |filterLF|sum[0]                                                                                               ; regout           ;
+; |filterLF|op_1~450                                                                                             ; |filterLF|op_1~450                                                                                             ; combout          ;
+; |filterLF|op_1~450                                                                                             ; |filterLF|op_1~451                                                                                             ; cout             ;
+; |filterLF|sum[0]~95                                                                                            ; |filterLF|sum[0]~95                                                                                            ; combout          ;
+; |filterLF|sum[0]~95                                                                                            ; |filterLF|sum[0]~96                                                                                            ; cout             ;
+; |filterLF|op_1~462                                                                                             ; |filterLF|op_1~463                                                                                             ; cout             ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|altsyncram_q681:altsyncram2|ram_block3a0 ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|altsyncram_q681:altsyncram2|q_b[0]       ; portbdataout0    ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|altsyncram_q681:altsyncram2|ram_block3a0 ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|altsyncram_q681:altsyncram2|q_b[1]       ; portbdataout1    ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|altsyncram_q681:altsyncram2|ram_block3a0 ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|altsyncram_q681:altsyncram2|q_b[2]       ; portbdataout2    ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|altsyncram_q681:altsyncram2|ram_block3a0 ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|altsyncram_q681:altsyncram2|q_b[3]       ; portbdataout3    ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|altsyncram_q681:altsyncram2|ram_block3a0 ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|altsyncram_q681:altsyncram2|q_b[4]       ; portbdataout4    ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|altsyncram_q681:altsyncram2|ram_block3a0 ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|altsyncram_q681:altsyncram2|q_b[7]       ; portbdataout7    ;
+; |filterLF|sum[7]~109                                                                                           ; |filterLF|sum[7]~110                                                                                           ; cout             ;
+; |filterLF|sum[9]~113                                                                                           ; |filterLF|sum[9]~114                                                                                           ; cout             ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|add_sub5_result_int[2]~12 ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|add_sub5_result_int[2]~13 ; cout             ;
+; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|add_sub5_result_int[3]~14 ; |filterLF|altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|cntr_okf:cntr1|add_sub5_result_int[3]~14 ; combout          ;
+; |filterLF|output_trigger[3]                                                                                    ; |filterLF|output_trigger[3]                                                                                    ; regout           ;
+; |filterLF|output_trigger[4]                                                                                    ; |filterLF|output_trigger[4]                                                                                    ; regout           ;
+; |filterLF|output_trigger[7]                                                                                    ; |filterLF|output_trigger[7]                                                                                    ; regout           ;
+; |filterLF|shift_reg[0][3]                                                                                      ; |filterLF|shift_reg[0][3]                                                                                      ; regout           ;
+; |filterLF|shift_reg[0][0]                                                                                      ; |filterLF|shift_reg[0][0]                                                                                      ; regout           ;
+; |filterLF|shift_reg[0][4]                                                                                      ; |filterLF|shift_reg[0][4]                                                                                      ; regout           ;
+; |filterLF|shift_reg[0][5]                                                                                      ; |filterLF|shift_reg[0][5]                                                                                      ; regout           ;
+; |filterLF|shift_reg[0][6]                                                                                      ; |filterLF|shift_reg[0][6]                                                                                      ; regout           ;
+; |filterLF|shift_reg[0][7]                                                                                      ; |filterLF|shift_reg[0][7]                                                                                      ; regout           ;
+; |filterLF|outputData[3]                                                                                        ; |filterLF|outputData[3]                                                                                        ; padio            ;
+; |filterLF|outputData[4]                                                                                        ; |filterLF|outputData[4]                                                                                        ; padio            ;
+; |filterLF|outputData[7]                                                                                        ; |filterLF|outputData[7]                                                                                        ; padio            ;
+; |filterLF|inputData[3]                                                                                         ; |filterLF|inputData[3]~corein                                                                                  ; combout          ;
+; |filterLF|inputData[0]                                                                                         ; |filterLF|inputData[0]~corein                                                                                  ; combout          ;
+; |filterLF|inputData[4]                                                                                         ; |filterLF|inputData[4]~corein                                                                                  ; combout          ;
+; |filterLF|inputData[5]                                                                                         ; |filterLF|inputData[5]~corein                                                                                  ; combout          ;
+; |filterLF|inputData[6]                                                                                         ; |filterLF|inputData[6]~corein                                                                                  ; combout          ;
+; |filterLF|inputData[7]                                                                                         ; |filterLF|inputData[7]~corein                                                                                  ; combout          ;
+; |filterLF|output_trigger[3]~feeder                                                                             ; |filterLF|output_trigger[3]~feeder                                                                             ; combout          ;
+; |filterLF|shift_reg[0][0]~feeder                                                                               ; |filterLF|shift_reg[0][0]~feeder                                                                               ; combout          ;
++----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 8.1 Build 163 10/28/2008 SJ Full Version
+    Info: Processing started: Wed Dec 26 12:14:33 2018
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off filterLF -c filterLF
+Info: Using vector source file "C:/Users/Никита/Desktop/filters/FLF/filterLF.vwf"
+Warning: Ignored node in vector source file. Can't find corresponding node name "temp[15]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temp[14]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temp[13]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temp[12]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temp[11]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temp[10]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temp[9]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temp[8]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temp[7]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temp[6]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temp[5]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temp[4]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temp[3]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temp[2]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temp[1]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temp[0]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "tempp[15]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "tempp[14]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "tempp[13]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "tempp[12]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "tempp[11]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "tempp[10]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "tempp[9]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "tempp[8]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "tempp[7]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "tempp[6]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "tempp[5]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "tempp[4]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "tempp[3]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "tempp[2]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "tempp[1]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "tempp[0]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temppp[15]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temppp[14]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temppp[13]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temppp[12]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temppp[11]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temppp[10]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temppp[9]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temppp[8]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temppp[7]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temppp[6]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temppp[5]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temppp[4]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temppp[3]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temppp[2]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temppp[1]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "temppp[0]" in design.
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      63.79 %
+Info: Number of transitions in simulation is 2664
+Info: Quartus II Simulator was successful. 0 errors, 48 warnings
+    Info: Peak virtual memory: 186 megabytes
+    Info: Processing ended: Wed Dec 26 12:14:33 2018
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

@@ -1,0 +1,498 @@
+Simulator report for bubbleSort
+Wed Dec 26 13:45:58 2018
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------+
+; Simulator Summary                           ;
++-----------------------------+---------------+
+; Type                        ; Value         ;
++-----------------------------+---------------+
+; Simulation Start Time       ; 0 ps          ;
+; Simulation End Time         ; 1.0 us        ;
+; Simulation Netlist Size     ; 185 nodes     ;
+; Simulation Coverage         ;      44.78 %  ;
+; Total Number of Transitions ; 596           ;
+; Simulation Breakpoints      ; 0             ;
+; Family                      ; Cyclone II    ;
+; Device                      ; EP2C20AF484A7 ;
++-----------------------------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                         ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+; Option                                                                                     ; Setting       ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+; Simulation mode                                                                            ; Timing        ; Timing        ;
+; Start time                                                                                 ; 0 ns          ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF          ;               ;
+; Vector input source                                                                        ; Waveform2.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On            ; On            ;
+; Check outputs                                                                              ; Off           ; Off           ;
+; Report simulation coverage                                                                 ; On            ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On            ; On            ;
+; Display missing 1-value coverage report                                                    ; On            ; On            ;
+; Display missing 0-value coverage report                                                    ; On            ; On            ;
+; Detect setup and hold time violations                                                      ; Off           ; Off           ;
+; Detect glitches                                                                            ; Off           ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off           ; Off           ;
+; Generate Signal Activity File                                                              ; Off           ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off           ; Off           ;
+; Group bus channels in simulation results                                                   ; Off           ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On            ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE    ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off           ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off           ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto          ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      44.78 % ;
+; Total nodes checked                                 ; 185          ;
+; Total output ports checked                          ; 201          ;
+; Total output ports with complete 1/0-value coverage ; 90           ;
+; Total output ports with no 1/0-value coverage       ; 103          ;
+; Total output ports with no 1-value coverage         ; 111          ;
+; Total output ports with no 0-value coverage         ; 103          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                        ;
++----------------------------------------+----------------------------------------+------------------+
+; Node Name                              ; Output Port Name                       ; Output Port Type ;
++----------------------------------------+----------------------------------------+------------------+
+; |bubbleSort|outputTrigger[1][0]        ; |bubbleSort|outputTrigger[1][0]        ; regout           ;
+; |bubbleSort|outputTrigger[1][1]        ; |bubbleSort|outputTrigger[1][1]        ; regout           ;
+; |bubbleSort|outputTrigger[1][3]        ; |bubbleSort|outputTrigger[1][3]        ; regout           ;
+; |bubbleSort|outputTrigger[1][5]        ; |bubbleSort|outputTrigger[1][5]        ; regout           ;
+; |bubbleSort|temp[0][2]                 ; |bubbleSort|temp[0][2]                 ; regout           ;
+; |bubbleSort|temp[0][3]                 ; |bubbleSort|temp[0][3]                 ; regout           ;
+; |bubbleSort|temp[0][5]                 ; |bubbleSort|temp[0][5]                 ; regout           ;
+; |bubbleSort|outputTrigger[1][0]~176    ; |bubbleSort|outputTrigger[1][0]~176    ; combout          ;
+; |bubbleSort|outputTrigger[1][0]~176    ; |bubbleSort|outputTrigger[1][0]~177    ; cout             ;
+; |bubbleSort|outputTrigger[1][1]~178    ; |bubbleSort|outputTrigger[1][1]~178    ; combout          ;
+; |bubbleSort|outputTrigger[1][1]~178    ; |bubbleSort|outputTrigger[1][1]~179    ; cout             ;
+; |bubbleSort|outputTrigger[1][3]~182    ; |bubbleSort|outputTrigger[1][3]~182    ; combout          ;
+; |bubbleSort|outputTrigger[1][3]~182    ; |bubbleSort|outputTrigger[1][3]~183    ; cout             ;
+; |bubbleSort|outputTrigger[1][4]~184    ; |bubbleSort|outputTrigger[1][4]~185    ; cout             ;
+; |bubbleSort|outputTrigger[1][5]~186    ; |bubbleSort|outputTrigger[1][5]~186    ; combout          ;
+; |bubbleSort|outputTrigger[1][5]~186    ; |bubbleSort|outputTrigger[1][5]~187    ; cout             ;
+; |bubbleSort|outputTrigger[1][6]~188    ; |bubbleSort|outputTrigger[1][6]~189    ; cout             ;
+; |bubbleSort|outputTrigger[1][7]~190    ; |bubbleSort|outputTrigger[1][7]~191    ; cout             ;
+; |bubbleSort|op_2~33                    ; |bubbleSort|op_2~33                    ; combout          ;
+; |bubbleSort|temp[0][2]~180             ; |bubbleSort|temp[0][2]~180             ; combout          ;
+; |bubbleSort|temp[0][2]~180             ; |bubbleSort|temp[0][2]~181             ; cout             ;
+; |bubbleSort|temp[0][3]~182             ; |bubbleSort|temp[0][3]~182             ; combout          ;
+; |bubbleSort|temp[0][3]~182             ; |bubbleSort|temp[0][3]~183             ; cout             ;
+; |bubbleSort|temp[0][4]~184             ; |bubbleSort|temp[0][4]~185             ; cout             ;
+; |bubbleSort|temp[0][5]~186             ; |bubbleSort|temp[0][5]~186             ; combout          ;
+; |bubbleSort|temp[0][5]~186             ; |bubbleSort|temp[0][5]~187             ; cout             ;
+; |bubbleSort|outputTrigger[0][2]        ; |bubbleSort|outputTrigger[0][2]        ; regout           ;
+; |bubbleSort|outputTrigger[0][3]        ; |bubbleSort|outputTrigger[0][3]        ; regout           ;
+; |bubbleSort|outputTrigger[0][5]        ; |bubbleSort|outputTrigger[0][5]        ; regout           ;
+; |bubbleSort|outputTrigger[2][0]        ; |bubbleSort|outputTrigger[2][0]        ; regout           ;
+; |bubbleSort|outputTrigger[2][1]        ; |bubbleSort|outputTrigger[2][1]        ; regout           ;
+; |bubbleSort|outputTrigger[2][2]        ; |bubbleSort|outputTrigger[2][2]        ; regout           ;
+; |bubbleSort|outputTrigger[2][6]        ; |bubbleSort|outputTrigger[2][6]        ; regout           ;
+; |bubbleSort|temp[1][0]                 ; |bubbleSort|temp[1][0]                 ; regout           ;
+; |bubbleSort|temp[2][0]                 ; |bubbleSort|temp[2][0]                 ; regout           ;
+; |bubbleSort|temp[1][6]                 ; |bubbleSort|temp[1][6]                 ; regout           ;
+; |bubbleSort|temp[2][5]                 ; |bubbleSort|temp[2][5]                 ; regout           ;
+; |bubbleSort|temp[2][3]                 ; |bubbleSort|temp[2][3]                 ; regout           ;
+; |bubbleSort|temp[1][2]                 ; |bubbleSort|temp[1][2]                 ; regout           ;
+; |bubbleSort|temp[1][1]                 ; |bubbleSort|temp[1][1]                 ; regout           ;
+; |bubbleSort|temp[2][1]                 ; |bubbleSort|temp[2][1]                 ; regout           ;
+; |bubbleSort|outputTrigger[2][0]~192    ; |bubbleSort|outputTrigger[2][0]~192    ; combout          ;
+; |bubbleSort|outputTrigger[2][1]~193    ; |bubbleSort|outputTrigger[2][1]~193    ; combout          ;
+; |bubbleSort|outputTrigger[2][2]~194    ; |bubbleSort|outputTrigger[2][2]~194    ; combout          ;
+; |bubbleSort|outputTrigger[2][6]~198    ; |bubbleSort|outputTrigger[2][6]~198    ; combout          ;
+; |bubbleSort|inputTrigger[0][0]         ; |bubbleSort|inputTrigger[0][0]         ; regout           ;
+; |bubbleSort|inputTrigger[0][6]         ; |bubbleSort|inputTrigger[0][6]         ; regout           ;
+; |bubbleSort|inputTrigger[1][5]         ; |bubbleSort|inputTrigger[1][5]         ; regout           ;
+; |bubbleSort|inputTrigger[1][3]         ; |bubbleSort|inputTrigger[1][3]         ; regout           ;
+; |bubbleSort|inputTrigger[0][2]         ; |bubbleSort|inputTrigger[0][2]         ; regout           ;
+; |bubbleSort|inputTrigger[1][2]         ; |bubbleSort|inputTrigger[1][2]         ; regout           ;
+; |bubbleSort|inputTrigger[0][1]         ; |bubbleSort|inputTrigger[0][1]         ; regout           ;
+; |bubbleSort|temp[1][0]~192             ; |bubbleSort|temp[1][0]~192             ; combout          ;
+; |bubbleSort|inputTrigger[2][0]         ; |bubbleSort|inputTrigger[2][0]         ; regout           ;
+; |bubbleSort|temp[1][6]~194             ; |bubbleSort|temp[1][6]~194             ; combout          ;
+; |bubbleSort|inputTrigger[2][5]         ; |bubbleSort|inputTrigger[2][5]         ; regout           ;
+; |bubbleSort|inputTrigger[2][3]         ; |bubbleSort|inputTrigger[2][3]         ; regout           ;
+; |bubbleSort|temp[1][2]~198             ; |bubbleSort|temp[1][2]~198             ; combout          ;
+; |bubbleSort|temp[1][1]~199             ; |bubbleSort|temp[1][1]~199             ; combout          ;
+; |bubbleSort|inputTrigger[2][1]         ; |bubbleSort|inputTrigger[2][1]         ; regout           ;
+; |bubbleSort|outputData[0][2]           ; |bubbleSort|outputData[0][2]           ; padio            ;
+; |bubbleSort|outputData[0][3]           ; |bubbleSort|outputData[0][3]           ; padio            ;
+; |bubbleSort|outputData[0][5]           ; |bubbleSort|outputData[0][5]           ; padio            ;
+; |bubbleSort|outputData[1][0]           ; |bubbleSort|outputData[1][0]           ; padio            ;
+; |bubbleSort|outputData[1][1]           ; |bubbleSort|outputData[1][1]           ; padio            ;
+; |bubbleSort|outputData[1][3]           ; |bubbleSort|outputData[1][3]           ; padio            ;
+; |bubbleSort|outputData[1][5]           ; |bubbleSort|outputData[1][5]           ; padio            ;
+; |bubbleSort|outputData[2][0]           ; |bubbleSort|outputData[2][0]           ; padio            ;
+; |bubbleSort|outputData[2][1]           ; |bubbleSort|outputData[2][1]           ; padio            ;
+; |bubbleSort|outputData[2][2]           ; |bubbleSort|outputData[2][2]           ; padio            ;
+; |bubbleSort|outputData[2][6]           ; |bubbleSort|outputData[2][6]           ; padio            ;
+; |bubbleSort|clock                      ; |bubbleSort|clock~corein               ; combout          ;
+; |bubbleSort|inputData[0][6]            ; |bubbleSort|inputData[0][6]~corein     ; combout          ;
+; |bubbleSort|inputData[1][5]            ; |bubbleSort|inputData[1][5]~corein     ; combout          ;
+; |bubbleSort|inputData[1][3]            ; |bubbleSort|inputData[1][3]~corein     ; combout          ;
+; |bubbleSort|inputData[0][1]            ; |bubbleSort|inputData[0][1]~corein     ; combout          ;
+; |bubbleSort|inputData[2][5]            ; |bubbleSort|inputData[2][5]~corein     ; combout          ;
+; |bubbleSort|inputData[2][3]            ; |bubbleSort|inputData[2][3]~corein     ; combout          ;
+; |bubbleSort|clock~clkctrl              ; |bubbleSort|clock~clkctrl              ; outclk           ;
+; |bubbleSort|outputTrigger[0][3]~feeder ; |bubbleSort|outputTrigger[0][3]~feeder ; combout          ;
+; |bubbleSort|outputTrigger[0][5]~feeder ; |bubbleSort|outputTrigger[0][5]~feeder ; combout          ;
+; |bubbleSort|temp[2][0]~feeder          ; |bubbleSort|temp[2][0]~feeder          ; combout          ;
+; |bubbleSort|temp[2][5]~feeder          ; |bubbleSort|temp[2][5]~feeder          ; combout          ;
+; |bubbleSort|temp[2][3]~feeder          ; |bubbleSort|temp[2][3]~feeder          ; combout          ;
+; |bubbleSort|temp[2][1]~feeder          ; |bubbleSort|temp[2][1]~feeder          ; combout          ;
+; |bubbleSort|inputTrigger[1][5]~feeder  ; |bubbleSort|inputTrigger[1][5]~feeder  ; combout          ;
+; |bubbleSort|inputTrigger[1][3]~feeder  ; |bubbleSort|inputTrigger[1][3]~feeder  ; combout          ;
+; |bubbleSort|inputTrigger[0][1]~feeder  ; |bubbleSort|inputTrigger[0][1]~feeder  ; combout          ;
+; |bubbleSort|inputTrigger[2][5]~feeder  ; |bubbleSort|inputTrigger[2][5]~feeder  ; combout          ;
+; |bubbleSort|inputTrigger[2][3]~feeder  ; |bubbleSort|inputTrigger[2][3]~feeder  ; combout          ;
++----------------------------------------+----------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                           ;
++----------------------------------------+----------------------------------------+------------------+
+; Node Name                              ; Output Port Name                       ; Output Port Type ;
++----------------------------------------+----------------------------------------+------------------+
+; |bubbleSort|outputTrigger[1][2]        ; |bubbleSort|outputTrigger[1][2]        ; regout           ;
+; |bubbleSort|outputTrigger[1][4]        ; |bubbleSort|outputTrigger[1][4]        ; regout           ;
+; |bubbleSort|outputTrigger[1][6]        ; |bubbleSort|outputTrigger[1][6]        ; regout           ;
+; |bubbleSort|outputTrigger[1][7]        ; |bubbleSort|outputTrigger[1][7]        ; regout           ;
+; |bubbleSort|temp[0][0]                 ; |bubbleSort|temp[0][0]                 ; regout           ;
+; |bubbleSort|temp[0][1]                 ; |bubbleSort|temp[0][1]                 ; regout           ;
+; |bubbleSort|temp[0][4]                 ; |bubbleSort|temp[0][4]                 ; regout           ;
+; |bubbleSort|temp[0][6]                 ; |bubbleSort|temp[0][6]                 ; regout           ;
+; |bubbleSort|temp[0][7]                 ; |bubbleSort|temp[0][7]                 ; regout           ;
+; |bubbleSort|outputTrigger[1][2]~180    ; |bubbleSort|outputTrigger[1][2]~180    ; combout          ;
+; |bubbleSort|outputTrigger[1][2]~180    ; |bubbleSort|outputTrigger[1][2]~181    ; cout             ;
+; |bubbleSort|outputTrigger[1][4]~184    ; |bubbleSort|outputTrigger[1][4]~184    ; combout          ;
+; |bubbleSort|outputTrigger[1][6]~188    ; |bubbleSort|outputTrigger[1][6]~188    ; combout          ;
+; |bubbleSort|outputTrigger[1][7]~190    ; |bubbleSort|outputTrigger[1][7]~190    ; combout          ;
+; |bubbleSort|temp[0][0]~176             ; |bubbleSort|temp[0][0]~176             ; combout          ;
+; |bubbleSort|temp[0][0]~176             ; |bubbleSort|temp[0][0]~177             ; cout             ;
+; |bubbleSort|temp[0][1]~178             ; |bubbleSort|temp[0][1]~178             ; combout          ;
+; |bubbleSort|temp[0][1]~178             ; |bubbleSort|temp[0][1]~179             ; cout             ;
+; |bubbleSort|temp[0][4]~184             ; |bubbleSort|temp[0][4]~184             ; combout          ;
+; |bubbleSort|temp[0][6]~188             ; |bubbleSort|temp[0][6]~188             ; combout          ;
+; |bubbleSort|temp[0][6]~188             ; |bubbleSort|temp[0][6]~189             ; cout             ;
+; |bubbleSort|temp[0][7]~190             ; |bubbleSort|temp[0][7]~190             ; combout          ;
+; |bubbleSort|temp[0][7]~190             ; |bubbleSort|temp[0][7]~191             ; cout             ;
+; |bubbleSort|op_1~33                    ; |bubbleSort|op_1~33                    ; combout          ;
+; |bubbleSort|outputTrigger[0][0]        ; |bubbleSort|outputTrigger[0][0]        ; regout           ;
+; |bubbleSort|outputTrigger[0][1]        ; |bubbleSort|outputTrigger[0][1]        ; regout           ;
+; |bubbleSort|outputTrigger[0][4]        ; |bubbleSort|outputTrigger[0][4]        ; regout           ;
+; |bubbleSort|outputTrigger[0][6]        ; |bubbleSort|outputTrigger[0][6]        ; regout           ;
+; |bubbleSort|outputTrigger[0][7]        ; |bubbleSort|outputTrigger[0][7]        ; regout           ;
+; |bubbleSort|outputTrigger[2][3]        ; |bubbleSort|outputTrigger[2][3]        ; regout           ;
+; |bubbleSort|outputTrigger[2][4]        ; |bubbleSort|outputTrigger[2][4]        ; regout           ;
+; |bubbleSort|outputTrigger[2][5]        ; |bubbleSort|outputTrigger[2][5]        ; regout           ;
+; |bubbleSort|outputTrigger[2][7]        ; |bubbleSort|outputTrigger[2][7]        ; regout           ;
+; |bubbleSort|temp[1][7]                 ; |bubbleSort|temp[1][7]                 ; regout           ;
+; |bubbleSort|temp[2][7]                 ; |bubbleSort|temp[2][7]                 ; regout           ;
+; |bubbleSort|temp[2][6]                 ; |bubbleSort|temp[2][6]                 ; regout           ;
+; |bubbleSort|temp[1][5]                 ; |bubbleSort|temp[1][5]                 ; regout           ;
+; |bubbleSort|temp[1][4]                 ; |bubbleSort|temp[1][4]                 ; regout           ;
+; |bubbleSort|temp[2][4]                 ; |bubbleSort|temp[2][4]                 ; regout           ;
+; |bubbleSort|temp[1][3]                 ; |bubbleSort|temp[1][3]                 ; regout           ;
+; |bubbleSort|temp[2][2]                 ; |bubbleSort|temp[2][2]                 ; regout           ;
+; |bubbleSort|outputTrigger[2][3]~195    ; |bubbleSort|outputTrigger[2][3]~195    ; combout          ;
+; |bubbleSort|outputTrigger[2][4]~196    ; |bubbleSort|outputTrigger[2][4]~196    ; combout          ;
+; |bubbleSort|outputTrigger[2][5]~197    ; |bubbleSort|outputTrigger[2][5]~197    ; combout          ;
+; |bubbleSort|outputTrigger[2][7]~199    ; |bubbleSort|outputTrigger[2][7]~199    ; combout          ;
+; |bubbleSort|inputTrigger[1][0]         ; |bubbleSort|inputTrigger[1][0]         ; regout           ;
+; |bubbleSort|inputTrigger[0][7]         ; |bubbleSort|inputTrigger[0][7]         ; regout           ;
+; |bubbleSort|inputTrigger[1][7]         ; |bubbleSort|inputTrigger[1][7]         ; regout           ;
+; |bubbleSort|inputTrigger[1][6]         ; |bubbleSort|inputTrigger[1][6]         ; regout           ;
+; |bubbleSort|inputTrigger[0][5]         ; |bubbleSort|inputTrigger[0][5]         ; regout           ;
+; |bubbleSort|inputTrigger[0][4]         ; |bubbleSort|inputTrigger[0][4]         ; regout           ;
+; |bubbleSort|inputTrigger[1][4]         ; |bubbleSort|inputTrigger[1][4]         ; regout           ;
+; |bubbleSort|inputTrigger[0][3]         ; |bubbleSort|inputTrigger[0][3]         ; regout           ;
+; |bubbleSort|inputTrigger[1][1]         ; |bubbleSort|inputTrigger[1][1]         ; regout           ;
+; |bubbleSort|temp[1][7]~193             ; |bubbleSort|temp[1][7]~193             ; combout          ;
+; |bubbleSort|inputTrigger[2][7]         ; |bubbleSort|inputTrigger[2][7]         ; regout           ;
+; |bubbleSort|inputTrigger[2][6]         ; |bubbleSort|inputTrigger[2][6]         ; regout           ;
+; |bubbleSort|temp[1][5]~195             ; |bubbleSort|temp[1][5]~195             ; combout          ;
+; |bubbleSort|temp[1][4]~196             ; |bubbleSort|temp[1][4]~196             ; combout          ;
+; |bubbleSort|inputTrigger[2][4]         ; |bubbleSort|inputTrigger[2][4]         ; regout           ;
+; |bubbleSort|temp[1][3]~197             ; |bubbleSort|temp[1][3]~197             ; combout          ;
+; |bubbleSort|inputTrigger[2][2]         ; |bubbleSort|inputTrigger[2][2]         ; regout           ;
+; |bubbleSort|outputData[0][0]           ; |bubbleSort|outputData[0][0]           ; padio            ;
+; |bubbleSort|outputData[0][1]           ; |bubbleSort|outputData[0][1]           ; padio            ;
+; |bubbleSort|outputData[0][4]           ; |bubbleSort|outputData[0][4]           ; padio            ;
+; |bubbleSort|outputData[0][6]           ; |bubbleSort|outputData[0][6]           ; padio            ;
+; |bubbleSort|outputData[0][7]           ; |bubbleSort|outputData[0][7]           ; padio            ;
+; |bubbleSort|outputData[1][2]           ; |bubbleSort|outputData[1][2]           ; padio            ;
+; |bubbleSort|outputData[1][4]           ; |bubbleSort|outputData[1][4]           ; padio            ;
+; |bubbleSort|outputData[1][6]           ; |bubbleSort|outputData[1][6]           ; padio            ;
+; |bubbleSort|outputData[1][7]           ; |bubbleSort|outputData[1][7]           ; padio            ;
+; |bubbleSort|outputData[2][3]           ; |bubbleSort|outputData[2][3]           ; padio            ;
+; |bubbleSort|outputData[2][4]           ; |bubbleSort|outputData[2][4]           ; padio            ;
+; |bubbleSort|outputData[2][5]           ; |bubbleSort|outputData[2][5]           ; padio            ;
+; |bubbleSort|outputData[2][7]           ; |bubbleSort|outputData[2][7]           ; padio            ;
+; |bubbleSort|inputData[0][0]            ; |bubbleSort|inputData[0][0]~corein     ; combout          ;
+; |bubbleSort|inputData[1][0]            ; |bubbleSort|inputData[1][0]~corein     ; combout          ;
+; |bubbleSort|inputData[0][7]            ; |bubbleSort|inputData[0][7]~corein     ; combout          ;
+; |bubbleSort|inputData[1][7]            ; |bubbleSort|inputData[1][7]~corein     ; combout          ;
+; |bubbleSort|inputData[1][6]            ; |bubbleSort|inputData[1][6]~corein     ; combout          ;
+; |bubbleSort|inputData[0][5]            ; |bubbleSort|inputData[0][5]~corein     ; combout          ;
+; |bubbleSort|inputData[0][4]            ; |bubbleSort|inputData[0][4]~corein     ; combout          ;
+; |bubbleSort|inputData[1][4]            ; |bubbleSort|inputData[1][4]~corein     ; combout          ;
+; |bubbleSort|inputData[0][3]            ; |bubbleSort|inputData[0][3]~corein     ; combout          ;
+; |bubbleSort|inputData[0][2]            ; |bubbleSort|inputData[0][2]~corein     ; combout          ;
+; |bubbleSort|inputData[1][2]            ; |bubbleSort|inputData[1][2]~corein     ; combout          ;
+; |bubbleSort|inputData[1][1]            ; |bubbleSort|inputData[1][1]~corein     ; combout          ;
+; |bubbleSort|inputData[2][0]            ; |bubbleSort|inputData[2][0]~corein     ; combout          ;
+; |bubbleSort|inputData[2][7]            ; |bubbleSort|inputData[2][7]~corein     ; combout          ;
+; |bubbleSort|inputData[2][6]            ; |bubbleSort|inputData[2][6]~corein     ; combout          ;
+; |bubbleSort|inputData[2][4]            ; |bubbleSort|inputData[2][4]~corein     ; combout          ;
+; |bubbleSort|inputData[2][2]            ; |bubbleSort|inputData[2][2]~corein     ; combout          ;
+; |bubbleSort|inputData[2][1]            ; |bubbleSort|inputData[2][1]~corein     ; combout          ;
+; |bubbleSort|outputTrigger[0][1]~feeder ; |bubbleSort|outputTrigger[0][1]~feeder ; combout          ;
+; |bubbleSort|outputTrigger[0][6]~feeder ; |bubbleSort|outputTrigger[0][6]~feeder ; combout          ;
+; |bubbleSort|outputTrigger[0][7]~feeder ; |bubbleSort|outputTrigger[0][7]~feeder ; combout          ;
+; |bubbleSort|temp[2][7]~feeder          ; |bubbleSort|temp[2][7]~feeder          ; combout          ;
+; |bubbleSort|temp[2][6]~feeder          ; |bubbleSort|temp[2][6]~feeder          ; combout          ;
+; |bubbleSort|temp[2][4]~feeder          ; |bubbleSort|temp[2][4]~feeder          ; combout          ;
+; |bubbleSort|temp[2][2]~feeder          ; |bubbleSort|temp[2][2]~feeder          ; combout          ;
+; |bubbleSort|inputTrigger[0][0]~feeder  ; |bubbleSort|inputTrigger[0][0]~feeder  ; combout          ;
+; |bubbleSort|inputTrigger[1][0]~feeder  ; |bubbleSort|inputTrigger[1][0]~feeder  ; combout          ;
+; |bubbleSort|inputTrigger[0][7]~feeder  ; |bubbleSort|inputTrigger[0][7]~feeder  ; combout          ;
+; |bubbleSort|inputTrigger[1][4]~feeder  ; |bubbleSort|inputTrigger[1][4]~feeder  ; combout          ;
+; |bubbleSort|inputTrigger[0][3]~feeder  ; |bubbleSort|inputTrigger[0][3]~feeder  ; combout          ;
+; |bubbleSort|inputTrigger[0][2]~feeder  ; |bubbleSort|inputTrigger[0][2]~feeder  ; combout          ;
+; |bubbleSort|inputTrigger[1][1]~feeder  ; |bubbleSort|inputTrigger[1][1]~feeder  ; combout          ;
+; |bubbleSort|inputTrigger[2][7]~feeder  ; |bubbleSort|inputTrigger[2][7]~feeder  ; combout          ;
+; |bubbleSort|inputTrigger[2][4]~feeder  ; |bubbleSort|inputTrigger[2][4]~feeder  ; combout          ;
+; |bubbleSort|inputTrigger[2][2]~feeder  ; |bubbleSort|inputTrigger[2][2]~feeder  ; combout          ;
+; |bubbleSort|inputTrigger[2][1]~feeder  ; |bubbleSort|inputTrigger[2][1]~feeder  ; combout          ;
++----------------------------------------+----------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                           ;
++----------------------------------------+----------------------------------------+------------------+
+; Node Name                              ; Output Port Name                       ; Output Port Type ;
++----------------------------------------+----------------------------------------+------------------+
+; |bubbleSort|outputTrigger[1][2]        ; |bubbleSort|outputTrigger[1][2]        ; regout           ;
+; |bubbleSort|outputTrigger[1][4]        ; |bubbleSort|outputTrigger[1][4]        ; regout           ;
+; |bubbleSort|outputTrigger[1][6]        ; |bubbleSort|outputTrigger[1][6]        ; regout           ;
+; |bubbleSort|outputTrigger[1][7]        ; |bubbleSort|outputTrigger[1][7]        ; regout           ;
+; |bubbleSort|temp[0][0]                 ; |bubbleSort|temp[0][0]                 ; regout           ;
+; |bubbleSort|temp[0][1]                 ; |bubbleSort|temp[0][1]                 ; regout           ;
+; |bubbleSort|temp[0][4]                 ; |bubbleSort|temp[0][4]                 ; regout           ;
+; |bubbleSort|temp[0][6]                 ; |bubbleSort|temp[0][6]                 ; regout           ;
+; |bubbleSort|temp[0][7]                 ; |bubbleSort|temp[0][7]                 ; regout           ;
+; |bubbleSort|outputTrigger[1][2]~180    ; |bubbleSort|outputTrigger[1][2]~180    ; combout          ;
+; |bubbleSort|outputTrigger[1][2]~180    ; |bubbleSort|outputTrigger[1][2]~181    ; cout             ;
+; |bubbleSort|outputTrigger[1][4]~184    ; |bubbleSort|outputTrigger[1][4]~184    ; combout          ;
+; |bubbleSort|outputTrigger[1][6]~188    ; |bubbleSort|outputTrigger[1][6]~188    ; combout          ;
+; |bubbleSort|outputTrigger[1][7]~190    ; |bubbleSort|outputTrigger[1][7]~190    ; combout          ;
+; |bubbleSort|temp[0][0]~176             ; |bubbleSort|temp[0][0]~176             ; combout          ;
+; |bubbleSort|temp[0][0]~176             ; |bubbleSort|temp[0][0]~177             ; cout             ;
+; |bubbleSort|temp[0][1]~178             ; |bubbleSort|temp[0][1]~178             ; combout          ;
+; |bubbleSort|temp[0][1]~178             ; |bubbleSort|temp[0][1]~179             ; cout             ;
+; |bubbleSort|temp[0][4]~184             ; |bubbleSort|temp[0][4]~184             ; combout          ;
+; |bubbleSort|temp[0][6]~188             ; |bubbleSort|temp[0][6]~188             ; combout          ;
+; |bubbleSort|temp[0][6]~188             ; |bubbleSort|temp[0][6]~189             ; cout             ;
+; |bubbleSort|temp[0][7]~190             ; |bubbleSort|temp[0][7]~190             ; combout          ;
+; |bubbleSort|temp[0][7]~190             ; |bubbleSort|temp[0][7]~191             ; cout             ;
+; |bubbleSort|op_1~33                    ; |bubbleSort|op_1~33                    ; combout          ;
+; |bubbleSort|outputTrigger[0][0]        ; |bubbleSort|outputTrigger[0][0]        ; regout           ;
+; |bubbleSort|outputTrigger[0][1]        ; |bubbleSort|outputTrigger[0][1]        ; regout           ;
+; |bubbleSort|outputTrigger[0][4]        ; |bubbleSort|outputTrigger[0][4]        ; regout           ;
+; |bubbleSort|outputTrigger[0][6]        ; |bubbleSort|outputTrigger[0][6]        ; regout           ;
+; |bubbleSort|outputTrigger[0][7]        ; |bubbleSort|outputTrigger[0][7]        ; regout           ;
+; |bubbleSort|outputTrigger[2][3]        ; |bubbleSort|outputTrigger[2][3]        ; regout           ;
+; |bubbleSort|outputTrigger[2][4]        ; |bubbleSort|outputTrigger[2][4]        ; regout           ;
+; |bubbleSort|outputTrigger[2][5]        ; |bubbleSort|outputTrigger[2][5]        ; regout           ;
+; |bubbleSort|outputTrigger[2][7]        ; |bubbleSort|outputTrigger[2][7]        ; regout           ;
+; |bubbleSort|temp[1][7]                 ; |bubbleSort|temp[1][7]                 ; regout           ;
+; |bubbleSort|temp[2][7]                 ; |bubbleSort|temp[2][7]                 ; regout           ;
+; |bubbleSort|temp[2][6]                 ; |bubbleSort|temp[2][6]                 ; regout           ;
+; |bubbleSort|temp[1][5]                 ; |bubbleSort|temp[1][5]                 ; regout           ;
+; |bubbleSort|temp[1][4]                 ; |bubbleSort|temp[1][4]                 ; regout           ;
+; |bubbleSort|temp[2][4]                 ; |bubbleSort|temp[2][4]                 ; regout           ;
+; |bubbleSort|temp[1][3]                 ; |bubbleSort|temp[1][3]                 ; regout           ;
+; |bubbleSort|temp[2][2]                 ; |bubbleSort|temp[2][2]                 ; regout           ;
+; |bubbleSort|outputTrigger[2][3]~195    ; |bubbleSort|outputTrigger[2][3]~195    ; combout          ;
+; |bubbleSort|outputTrigger[2][4]~196    ; |bubbleSort|outputTrigger[2][4]~196    ; combout          ;
+; |bubbleSort|outputTrigger[2][5]~197    ; |bubbleSort|outputTrigger[2][5]~197    ; combout          ;
+; |bubbleSort|outputTrigger[2][7]~199    ; |bubbleSort|outputTrigger[2][7]~199    ; combout          ;
+; |bubbleSort|inputTrigger[1][0]         ; |bubbleSort|inputTrigger[1][0]         ; regout           ;
+; |bubbleSort|inputTrigger[0][7]         ; |bubbleSort|inputTrigger[0][7]         ; regout           ;
+; |bubbleSort|inputTrigger[1][7]         ; |bubbleSort|inputTrigger[1][7]         ; regout           ;
+; |bubbleSort|inputTrigger[1][6]         ; |bubbleSort|inputTrigger[1][6]         ; regout           ;
+; |bubbleSort|inputTrigger[0][5]         ; |bubbleSort|inputTrigger[0][5]         ; regout           ;
+; |bubbleSort|inputTrigger[0][4]         ; |bubbleSort|inputTrigger[0][4]         ; regout           ;
+; |bubbleSort|inputTrigger[1][4]         ; |bubbleSort|inputTrigger[1][4]         ; regout           ;
+; |bubbleSort|inputTrigger[0][3]         ; |bubbleSort|inputTrigger[0][3]         ; regout           ;
+; |bubbleSort|inputTrigger[1][1]         ; |bubbleSort|inputTrigger[1][1]         ; regout           ;
+; |bubbleSort|temp[1][7]~193             ; |bubbleSort|temp[1][7]~193             ; combout          ;
+; |bubbleSort|inputTrigger[2][7]         ; |bubbleSort|inputTrigger[2][7]         ; regout           ;
+; |bubbleSort|inputTrigger[2][6]         ; |bubbleSort|inputTrigger[2][6]         ; regout           ;
+; |bubbleSort|temp[1][5]~195             ; |bubbleSort|temp[1][5]~195             ; combout          ;
+; |bubbleSort|temp[1][4]~196             ; |bubbleSort|temp[1][4]~196             ; combout          ;
+; |bubbleSort|inputTrigger[2][4]         ; |bubbleSort|inputTrigger[2][4]         ; regout           ;
+; |bubbleSort|temp[1][3]~197             ; |bubbleSort|temp[1][3]~197             ; combout          ;
+; |bubbleSort|inputTrigger[2][2]         ; |bubbleSort|inputTrigger[2][2]         ; regout           ;
+; |bubbleSort|outputData[0][0]           ; |bubbleSort|outputData[0][0]           ; padio            ;
+; |bubbleSort|outputData[0][1]           ; |bubbleSort|outputData[0][1]           ; padio            ;
+; |bubbleSort|outputData[0][4]           ; |bubbleSort|outputData[0][4]           ; padio            ;
+; |bubbleSort|outputData[0][6]           ; |bubbleSort|outputData[0][6]           ; padio            ;
+; |bubbleSort|outputData[0][7]           ; |bubbleSort|outputData[0][7]           ; padio            ;
+; |bubbleSort|outputData[1][2]           ; |bubbleSort|outputData[1][2]           ; padio            ;
+; |bubbleSort|outputData[1][4]           ; |bubbleSort|outputData[1][4]           ; padio            ;
+; |bubbleSort|outputData[1][6]           ; |bubbleSort|outputData[1][6]           ; padio            ;
+; |bubbleSort|outputData[1][7]           ; |bubbleSort|outputData[1][7]           ; padio            ;
+; |bubbleSort|outputData[2][3]           ; |bubbleSort|outputData[2][3]           ; padio            ;
+; |bubbleSort|outputData[2][4]           ; |bubbleSort|outputData[2][4]           ; padio            ;
+; |bubbleSort|outputData[2][5]           ; |bubbleSort|outputData[2][5]           ; padio            ;
+; |bubbleSort|outputData[2][7]           ; |bubbleSort|outputData[2][7]           ; padio            ;
+; |bubbleSort|inputData[1][0]            ; |bubbleSort|inputData[1][0]~corein     ; combout          ;
+; |bubbleSort|inputData[0][7]            ; |bubbleSort|inputData[0][7]~corein     ; combout          ;
+; |bubbleSort|inputData[1][7]            ; |bubbleSort|inputData[1][7]~corein     ; combout          ;
+; |bubbleSort|inputData[1][6]            ; |bubbleSort|inputData[1][6]~corein     ; combout          ;
+; |bubbleSort|inputData[0][5]            ; |bubbleSort|inputData[0][5]~corein     ; combout          ;
+; |bubbleSort|inputData[0][4]            ; |bubbleSort|inputData[0][4]~corein     ; combout          ;
+; |bubbleSort|inputData[1][4]            ; |bubbleSort|inputData[1][4]~corein     ; combout          ;
+; |bubbleSort|inputData[0][3]            ; |bubbleSort|inputData[0][3]~corein     ; combout          ;
+; |bubbleSort|inputData[1][1]            ; |bubbleSort|inputData[1][1]~corein     ; combout          ;
+; |bubbleSort|inputData[2][7]            ; |bubbleSort|inputData[2][7]~corein     ; combout          ;
+; |bubbleSort|inputData[2][6]            ; |bubbleSort|inputData[2][6]~corein     ; combout          ;
+; |bubbleSort|inputData[2][4]            ; |bubbleSort|inputData[2][4]~corein     ; combout          ;
+; |bubbleSort|inputData[2][2]            ; |bubbleSort|inputData[2][2]~corein     ; combout          ;
+; |bubbleSort|outputTrigger[0][1]~feeder ; |bubbleSort|outputTrigger[0][1]~feeder ; combout          ;
+; |bubbleSort|outputTrigger[0][6]~feeder ; |bubbleSort|outputTrigger[0][6]~feeder ; combout          ;
+; |bubbleSort|outputTrigger[0][7]~feeder ; |bubbleSort|outputTrigger[0][7]~feeder ; combout          ;
+; |bubbleSort|temp[2][7]~feeder          ; |bubbleSort|temp[2][7]~feeder          ; combout          ;
+; |bubbleSort|temp[2][6]~feeder          ; |bubbleSort|temp[2][6]~feeder          ; combout          ;
+; |bubbleSort|temp[2][4]~feeder          ; |bubbleSort|temp[2][4]~feeder          ; combout          ;
+; |bubbleSort|temp[2][2]~feeder          ; |bubbleSort|temp[2][2]~feeder          ; combout          ;
+; |bubbleSort|inputTrigger[1][0]~feeder  ; |bubbleSort|inputTrigger[1][0]~feeder  ; combout          ;
+; |bubbleSort|inputTrigger[0][7]~feeder  ; |bubbleSort|inputTrigger[0][7]~feeder  ; combout          ;
+; |bubbleSort|inputTrigger[1][4]~feeder  ; |bubbleSort|inputTrigger[1][4]~feeder  ; combout          ;
+; |bubbleSort|inputTrigger[0][3]~feeder  ; |bubbleSort|inputTrigger[0][3]~feeder  ; combout          ;
+; |bubbleSort|inputTrigger[1][1]~feeder  ; |bubbleSort|inputTrigger[1][1]~feeder  ; combout          ;
+; |bubbleSort|inputTrigger[2][7]~feeder  ; |bubbleSort|inputTrigger[2][7]~feeder  ; combout          ;
+; |bubbleSort|inputTrigger[2][4]~feeder  ; |bubbleSort|inputTrigger[2][4]~feeder  ; combout          ;
+; |bubbleSort|inputTrigger[2][2]~feeder  ; |bubbleSort|inputTrigger[2][2]~feeder  ; combout          ;
++----------------------------------------+----------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 8.1 Build 163 10/28/2008 SJ Full Version
+    Info: Processing started: Wed Dec 26 13:45:57 2018
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off bubbleSort -c bubbleSort
+Info: Using vector source file "C:/Users/Никита/Desktop/filters/bubbleSort/Waveform2.vwf"
+Warning: Ignored node in vector source file. Can't find corresponding node name "inputData[4][0]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "inputData[4][1]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "inputData[4][2]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "inputData[4][3]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "inputData[4][4]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "inputData[4][5]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "inputData[4][6]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "inputData[4][7]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "inputData[3][0]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "inputData[3][1]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "inputData[3][2]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "inputData[3][3]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "inputData[3][4]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "inputData[3][5]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "inputData[3][6]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "inputData[3][7]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "outputData[4][0]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "outputData[4][1]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "outputData[4][2]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "outputData[4][3]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "outputData[4][4]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "outputData[4][5]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "outputData[4][6]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "outputData[4][7]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "outputData[3][0]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "outputData[3][1]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "outputData[3][2]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "outputData[3][3]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "outputData[3][4]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "outputData[3][5]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "outputData[3][6]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "outputData[3][7]" in design.
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      44.78 %
+Info: Number of transitions in simulation is 596
+Info: Quartus II Simulator was successful. 0 errors, 32 warnings
+    Info: Peak virtual memory: 186 megabytes
+    Info: Processing ended: Wed Dec 26 13:45:58 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

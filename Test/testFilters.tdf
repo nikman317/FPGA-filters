@@ -1,0 +1,41 @@
+Title "testFilters";
+
+
+include "medianFilter.inc";
+include "filterLF.inc";
+
+
+PARAMETERS
+(
+	mode = 0  -- 1 - сначала медианный
+			  -- 0 - сначала фильтр низких частот
+);
+
+
+SUBDESIGN testFilters(
+inputData[7..0]				: input;
+clock						: input;
+outputData[7..0]			: output;
+)
+
+variable
+	_medianFilter : medianFilter with ( width = 5);
+	_filterLF : filterLF with ( width = 4);
+	
+
+Begin
+
+_medianFilter.clock = clock;
+_filterLF.clock = clock;
+
+if mode == 1 then
+	_medianFilter.inputData[] = inputData[];
+	_filterLF.inputData[] = _medianFilter.outputData[];
+	outputData[] = _filterLF.outputData[];
+else
+	_filterLF.inputData[] = inputData[];
+	_medianFilter.inputData[] = _filterLF.outputData[];
+	outputData[] = _medianFilter.outputData[];
+end if;
+	
+End;

@@ -1,0 +1,49 @@
+Title "medianFilter";
+
+
+include "bubbleSort.inc";
+
+
+PARAMETERS
+(
+	WIDTH = 3
+);
+
+constant widthLocal = width;
+constant meanValue = width div 2 + 1;
+
+SUBDESIGN medianFilter(
+inputData[7..0]				: input;
+clock						: input;
+outputData[7..0]				: output;
+)
+
+
+variable
+	output_trigger[7..0]: DFF;
+	shift_reg[width-1..0][7..0] : DFF;
+	sorters[meanValue..0] : bubbleSort with( width = widthLocal );
+	
+
+Begin
+
+sorters[].clock = clock;
+
+
+shift_reg[][].clk = clock;
+for j in 1 to width-1
+	generate
+		shift_reg[j][].d = shift_reg[j-1][].q;
+	end generate;
+shift_reg[0][].d = inputData[];
+	
+sorters[0].inputData[][] = shift_reg[][];
+for i in 1 to meanValue generate
+	sorters[i].inputData[][] = sorters[i-1].outputData[][];
+end generate;
+
+output_trigger[].clk = clock;
+output_trigger[].d = sorters[meanValue-1].outputData[meanValue-1][];
+outputData[] = output_trigger[].q;
+	
+End;

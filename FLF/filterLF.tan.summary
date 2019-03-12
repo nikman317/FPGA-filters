@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 4.433 ns
+From           : inputData[7]
+To             : shift_reg[0][7]
+From Clock     : --
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.045 ns
+From           : output_trigger[4]
+To             : outputData[4]
+From Clock     : clock
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -3.682 ns
+From           : inputData[0]
+To             : shift_reg[0][0]
+From Clock     : --
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clock'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 195.01 MHz ( period = 5.128 ns )
+From           : altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|altsyncram_q681:altsyncram2|ram_block3a0~portb_address_reg2
+To             : altshift_taps:shift_reg_rtl_0|shift_taps_g0m:auto_generated|altsyncram_q681:altsyncram2|q_b[7]
+From Clock     : clock
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

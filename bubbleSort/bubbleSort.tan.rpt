@@ -1,0 +1,486 @@
+Classic Timing Analyzer report for bubbleSort
+Tue Dec 25 21:35:39 2018
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'clock'
+  6. tsu
+  7. tco
+  8. th
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                   ;
++------------------------------+-------+---------------+----------------------------------+---------------------+--------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                ; To                 ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+---------------------+--------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 4.965 ns                         ; inputData[0][1]     ; inputTrigger[0][1] ; --         ; clock    ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 8.631 ns                         ; outputTrigger[2][2] ; outputData[2][2]   ; clock      ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -3.711 ns                        ; inputData[2][4]     ; inputTrigger[2][4] ; --         ; clock    ; 0            ;
+; Clock Setup: 'clock'         ; N/A   ; None          ; 269.32 MHz ( period = 3.713 ns ) ; inputTrigger[0][3]  ; temp[1][0]         ; clock      ; clock    ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                     ;                    ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+---------------------+--------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2C20AF484A7      ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; -40                ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 125                ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clock           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clock'                                                                                                                                                                                                                                 ;
++-----------------------------------------+-----------------------------------------------------+--------------------+---------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From               ; To                  ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+--------------------+---------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 269.32 MHz ( period = 3.713 ns )                    ; inputTrigger[0][3] ; temp[1][0]          ; clock      ; clock    ; None                        ; None                      ; 3.467 ns                ;
+; N/A                                     ; 269.47 MHz ( period = 3.711 ns )                    ; inputTrigger[0][3] ; temp[1][1]          ; clock      ; clock    ; None                        ; None                      ; 3.465 ns                ;
+; N/A                                     ; 270.34 MHz ( period = 3.699 ns )                    ; inputTrigger[0][3] ; temp[1][7]          ; clock      ; clock    ; None                        ; None                      ; 3.454 ns                ;
+; N/A                                     ; 272.48 MHz ( period = 3.670 ns )                    ; inputTrigger[1][5] ; temp[1][0]          ; clock      ; clock    ; None                        ; None                      ; 3.427 ns                ;
+; N/A                                     ; 272.63 MHz ( period = 3.668 ns )                    ; inputTrigger[1][5] ; temp[1][1]          ; clock      ; clock    ; None                        ; None                      ; 3.425 ns                ;
+; N/A                                     ; 273.52 MHz ( period = 3.656 ns )                    ; inputTrigger[1][5] ; temp[1][7]          ; clock      ; clock    ; None                        ; None                      ; 3.414 ns                ;
+; N/A                                     ; 273.97 MHz ( period = 3.650 ns )                    ; inputTrigger[0][3] ; temp[0][0]          ; clock      ; clock    ; None                        ; None                      ; 3.405 ns                ;
+; N/A                                     ; 273.97 MHz ( period = 3.650 ns )                    ; inputTrigger[0][3] ; temp[0][1]          ; clock      ; clock    ; None                        ; None                      ; 3.405 ns                ;
+; N/A                                     ; 273.97 MHz ( period = 3.650 ns )                    ; inputTrigger[0][3] ; temp[0][2]          ; clock      ; clock    ; None                        ; None                      ; 3.405 ns                ;
+; N/A                                     ; 273.97 MHz ( period = 3.650 ns )                    ; inputTrigger[0][3] ; temp[0][3]          ; clock      ; clock    ; None                        ; None                      ; 3.405 ns                ;
+; N/A                                     ; 273.97 MHz ( period = 3.650 ns )                    ; inputTrigger[0][3] ; temp[0][4]          ; clock      ; clock    ; None                        ; None                      ; 3.405 ns                ;
+; N/A                                     ; 273.97 MHz ( period = 3.650 ns )                    ; inputTrigger[0][3] ; temp[0][5]          ; clock      ; clock    ; None                        ; None                      ; 3.405 ns                ;
+; N/A                                     ; 273.97 MHz ( period = 3.650 ns )                    ; inputTrigger[0][3] ; temp[0][6]          ; clock      ; clock    ; None                        ; None                      ; 3.405 ns                ;
+; N/A                                     ; 273.97 MHz ( period = 3.650 ns )                    ; inputTrigger[0][3] ; temp[0][7]          ; clock      ; clock    ; None                        ; None                      ; 3.405 ns                ;
+; N/A                                     ; 275.18 MHz ( period = 3.634 ns )                    ; temp[2][0]         ; outputTrigger[1][0] ; clock      ; clock    ; None                        ; None                      ; 3.387 ns                ;
+; N/A                                     ; 275.18 MHz ( period = 3.634 ns )                    ; temp[2][0]         ; outputTrigger[1][1] ; clock      ; clock    ; None                        ; None                      ; 3.387 ns                ;
+; N/A                                     ; 275.18 MHz ( period = 3.634 ns )                    ; temp[2][0]         ; outputTrigger[1][2] ; clock      ; clock    ; None                        ; None                      ; 3.387 ns                ;
+; N/A                                     ; 275.18 MHz ( period = 3.634 ns )                    ; temp[2][0]         ; outputTrigger[1][3] ; clock      ; clock    ; None                        ; None                      ; 3.387 ns                ;
+; N/A                                     ; 275.18 MHz ( period = 3.634 ns )                    ; temp[2][0]         ; outputTrigger[1][4] ; clock      ; clock    ; None                        ; None                      ; 3.387 ns                ;
+; N/A                                     ; 275.18 MHz ( period = 3.634 ns )                    ; temp[2][0]         ; outputTrigger[1][5] ; clock      ; clock    ; None                        ; None                      ; 3.387 ns                ;
+; N/A                                     ; 275.18 MHz ( period = 3.634 ns )                    ; temp[2][0]         ; outputTrigger[1][6] ; clock      ; clock    ; None                        ; None                      ; 3.387 ns                ;
+; N/A                                     ; 275.18 MHz ( period = 3.634 ns )                    ; temp[2][0]         ; outputTrigger[1][7] ; clock      ; clock    ; None                        ; None                      ; 3.387 ns                ;
+; N/A                                     ; 277.24 MHz ( period = 3.607 ns )                    ; inputTrigger[1][5] ; temp[0][0]          ; clock      ; clock    ; None                        ; None                      ; 3.365 ns                ;
+; N/A                                     ; 277.24 MHz ( period = 3.607 ns )                    ; inputTrigger[1][5] ; temp[0][1]          ; clock      ; clock    ; None                        ; None                      ; 3.365 ns                ;
+; N/A                                     ; 277.24 MHz ( period = 3.607 ns )                    ; inputTrigger[1][5] ; temp[0][2]          ; clock      ; clock    ; None                        ; None                      ; 3.365 ns                ;
+; N/A                                     ; 277.24 MHz ( period = 3.607 ns )                    ; inputTrigger[1][5] ; temp[0][3]          ; clock      ; clock    ; None                        ; None                      ; 3.365 ns                ;
+; N/A                                     ; 277.24 MHz ( period = 3.607 ns )                    ; inputTrigger[1][5] ; temp[0][4]          ; clock      ; clock    ; None                        ; None                      ; 3.365 ns                ;
+; N/A                                     ; 277.24 MHz ( period = 3.607 ns )                    ; inputTrigger[1][5] ; temp[0][5]          ; clock      ; clock    ; None                        ; None                      ; 3.365 ns                ;
+; N/A                                     ; 277.24 MHz ( period = 3.607 ns )                    ; inputTrigger[1][5] ; temp[0][6]          ; clock      ; clock    ; None                        ; None                      ; 3.365 ns                ;
+; N/A                                     ; 277.24 MHz ( period = 3.607 ns )                    ; inputTrigger[1][5] ; temp[0][7]          ; clock      ; clock    ; None                        ; None                      ; 3.365 ns                ;
+; N/A                                     ; 277.55 MHz ( period = 3.603 ns )                    ; temp[2][3]         ; outputTrigger[1][0] ; clock      ; clock    ; None                        ; None                      ; 3.355 ns                ;
+; N/A                                     ; 277.55 MHz ( period = 3.603 ns )                    ; temp[2][3]         ; outputTrigger[1][1] ; clock      ; clock    ; None                        ; None                      ; 3.355 ns                ;
+; N/A                                     ; 277.55 MHz ( period = 3.603 ns )                    ; temp[2][3]         ; outputTrigger[1][2] ; clock      ; clock    ; None                        ; None                      ; 3.355 ns                ;
+; N/A                                     ; 277.55 MHz ( period = 3.603 ns )                    ; temp[2][3]         ; outputTrigger[1][3] ; clock      ; clock    ; None                        ; None                      ; 3.355 ns                ;
+; N/A                                     ; 277.55 MHz ( period = 3.603 ns )                    ; temp[2][3]         ; outputTrigger[1][4] ; clock      ; clock    ; None                        ; None                      ; 3.355 ns                ;
+; N/A                                     ; 277.55 MHz ( period = 3.603 ns )                    ; temp[2][3]         ; outputTrigger[1][5] ; clock      ; clock    ; None                        ; None                      ; 3.355 ns                ;
+; N/A                                     ; 277.55 MHz ( period = 3.603 ns )                    ; temp[2][3]         ; outputTrigger[1][6] ; clock      ; clock    ; None                        ; None                      ; 3.355 ns                ;
+; N/A                                     ; 277.55 MHz ( period = 3.603 ns )                    ; temp[2][3]         ; outputTrigger[1][7] ; clock      ; clock    ; None                        ; None                      ; 3.355 ns                ;
+; N/A                                     ; 279.41 MHz ( period = 3.579 ns )                    ; inputTrigger[0][2] ; temp[1][0]          ; clock      ; clock    ; None                        ; None                      ; 3.331 ns                ;
+; N/A                                     ; 279.56 MHz ( period = 3.577 ns )                    ; inputTrigger[0][2] ; temp[1][1]          ; clock      ; clock    ; None                        ; None                      ; 3.329 ns                ;
+; N/A                                     ; 279.80 MHz ( period = 3.574 ns )                    ; inputTrigger[0][5] ; temp[1][0]          ; clock      ; clock    ; None                        ; None                      ; 3.331 ns                ;
+; N/A                                     ; 279.96 MHz ( period = 3.572 ns )                    ; inputTrigger[0][5] ; temp[1][1]          ; clock      ; clock    ; None                        ; None                      ; 3.329 ns                ;
+; N/A                                     ; 280.50 MHz ( period = 3.565 ns )                    ; inputTrigger[0][2] ; temp[1][7]          ; clock      ; clock    ; None                        ; None                      ; 3.318 ns                ;
+; N/A                                     ; 280.90 MHz ( period = 3.560 ns )                    ; inputTrigger[0][5] ; temp[1][7]          ; clock      ; clock    ; None                        ; None                      ; 3.318 ns                ;
+; N/A                                     ; 282.57 MHz ( period = 3.539 ns )                    ; inputTrigger[0][6] ; temp[1][0]          ; clock      ; clock    ; None                        ; None                      ; 3.297 ns                ;
+; N/A                                     ; 282.73 MHz ( period = 3.537 ns )                    ; inputTrigger[0][6] ; temp[1][1]          ; clock      ; clock    ; None                        ; None                      ; 3.295 ns                ;
+; N/A                                     ; 283.61 MHz ( period = 3.526 ns )                    ; temp[1][4]         ; outputTrigger[1][0] ; clock      ; clock    ; None                        ; None                      ; 3.278 ns                ;
+; N/A                                     ; 283.61 MHz ( period = 3.526 ns )                    ; temp[1][4]         ; outputTrigger[1][1] ; clock      ; clock    ; None                        ; None                      ; 3.278 ns                ;
+; N/A                                     ; 283.61 MHz ( period = 3.526 ns )                    ; temp[1][4]         ; outputTrigger[1][2] ; clock      ; clock    ; None                        ; None                      ; 3.278 ns                ;
+; N/A                                     ; 283.61 MHz ( period = 3.526 ns )                    ; temp[1][4]         ; outputTrigger[1][3] ; clock      ; clock    ; None                        ; None                      ; 3.278 ns                ;
+; N/A                                     ; 283.61 MHz ( period = 3.526 ns )                    ; temp[1][4]         ; outputTrigger[1][4] ; clock      ; clock    ; None                        ; None                      ; 3.278 ns                ;
+; N/A                                     ; 283.61 MHz ( period = 3.526 ns )                    ; temp[1][4]         ; outputTrigger[1][5] ; clock      ; clock    ; None                        ; None                      ; 3.278 ns                ;
+; N/A                                     ; 283.61 MHz ( period = 3.526 ns )                    ; temp[1][4]         ; outputTrigger[1][6] ; clock      ; clock    ; None                        ; None                      ; 3.278 ns                ;
+; N/A                                     ; 283.61 MHz ( period = 3.526 ns )                    ; temp[1][4]         ; outputTrigger[1][7] ; clock      ; clock    ; None                        ; None                      ; 3.278 ns                ;
+; N/A                                     ; 283.69 MHz ( period = 3.525 ns )                    ; inputTrigger[0][6] ; temp[1][7]          ; clock      ; clock    ; None                        ; None                      ; 3.284 ns                ;
+; N/A                                     ; 283.77 MHz ( period = 3.524 ns )                    ; inputTrigger[1][6] ; temp[1][0]          ; clock      ; clock    ; None                        ; None                      ; 3.282 ns                ;
+; N/A                                     ; 283.93 MHz ( period = 3.522 ns )                    ; inputTrigger[1][6] ; temp[1][1]          ; clock      ; clock    ; None                        ; None                      ; 3.280 ns                ;
+; N/A                                     ; 284.41 MHz ( period = 3.516 ns )                    ; inputTrigger[0][2] ; temp[0][0]          ; clock      ; clock    ; None                        ; None                      ; 3.269 ns                ;
+; N/A                                     ; 284.41 MHz ( period = 3.516 ns )                    ; inputTrigger[0][2] ; temp[0][1]          ; clock      ; clock    ; None                        ; None                      ; 3.269 ns                ;
+; N/A                                     ; 284.41 MHz ( period = 3.516 ns )                    ; inputTrigger[0][2] ; temp[0][2]          ; clock      ; clock    ; None                        ; None                      ; 3.269 ns                ;
+; N/A                                     ; 284.41 MHz ( period = 3.516 ns )                    ; inputTrigger[0][2] ; temp[0][3]          ; clock      ; clock    ; None                        ; None                      ; 3.269 ns                ;
+; N/A                                     ; 284.41 MHz ( period = 3.516 ns )                    ; inputTrigger[0][2] ; temp[0][4]          ; clock      ; clock    ; None                        ; None                      ; 3.269 ns                ;
+; N/A                                     ; 284.41 MHz ( period = 3.516 ns )                    ; inputTrigger[0][2] ; temp[0][5]          ; clock      ; clock    ; None                        ; None                      ; 3.269 ns                ;
+; N/A                                     ; 284.41 MHz ( period = 3.516 ns )                    ; inputTrigger[0][2] ; temp[0][6]          ; clock      ; clock    ; None                        ; None                      ; 3.269 ns                ;
+; N/A                                     ; 284.41 MHz ( period = 3.516 ns )                    ; inputTrigger[0][2] ; temp[0][7]          ; clock      ; clock    ; None                        ; None                      ; 3.269 ns                ;
+; N/A                                     ; 284.82 MHz ( period = 3.511 ns )                    ; inputTrigger[0][5] ; temp[0][0]          ; clock      ; clock    ; None                        ; None                      ; 3.269 ns                ;
+; N/A                                     ; 284.82 MHz ( period = 3.511 ns )                    ; inputTrigger[0][5] ; temp[0][1]          ; clock      ; clock    ; None                        ; None                      ; 3.269 ns                ;
+; N/A                                     ; 284.82 MHz ( period = 3.511 ns )                    ; inputTrigger[0][5] ; temp[0][2]          ; clock      ; clock    ; None                        ; None                      ; 3.269 ns                ;
+; N/A                                     ; 284.82 MHz ( period = 3.511 ns )                    ; inputTrigger[0][5] ; temp[0][3]          ; clock      ; clock    ; None                        ; None                      ; 3.269 ns                ;
+; N/A                                     ; 284.82 MHz ( period = 3.511 ns )                    ; inputTrigger[0][5] ; temp[0][4]          ; clock      ; clock    ; None                        ; None                      ; 3.269 ns                ;
+; N/A                                     ; 284.82 MHz ( period = 3.511 ns )                    ; inputTrigger[0][5] ; temp[0][5]          ; clock      ; clock    ; None                        ; None                      ; 3.269 ns                ;
+; N/A                                     ; 284.82 MHz ( period = 3.511 ns )                    ; inputTrigger[0][5] ; temp[0][6]          ; clock      ; clock    ; None                        ; None                      ; 3.269 ns                ;
+; N/A                                     ; 284.82 MHz ( period = 3.511 ns )                    ; inputTrigger[0][5] ; temp[0][7]          ; clock      ; clock    ; None                        ; None                      ; 3.269 ns                ;
+; N/A                                     ; 284.90 MHz ( period = 3.510 ns )                    ; inputTrigger[1][6] ; temp[1][7]          ; clock      ; clock    ; None                        ; None                      ; 3.269 ns                ;
+; N/A                                     ; 285.96 MHz ( period = 3.497 ns )                    ; inputTrigger[1][2] ; temp[1][0]          ; clock      ; clock    ; None                        ; None                      ; 3.249 ns                ;
+; N/A                                     ; 286.12 MHz ( period = 3.495 ns )                    ; inputTrigger[1][2] ; temp[1][1]          ; clock      ; clock    ; None                        ; None                      ; 3.247 ns                ;
+; N/A                                     ; 287.11 MHz ( period = 3.483 ns )                    ; inputTrigger[1][2] ; temp[1][7]          ; clock      ; clock    ; None                        ; None                      ; 3.236 ns                ;
+; N/A                                     ; 287.69 MHz ( period = 3.476 ns )                    ; inputTrigger[0][6] ; temp[0][0]          ; clock      ; clock    ; None                        ; None                      ; 3.235 ns                ;
+; N/A                                     ; 287.69 MHz ( period = 3.476 ns )                    ; inputTrigger[0][6] ; temp[0][1]          ; clock      ; clock    ; None                        ; None                      ; 3.235 ns                ;
+; N/A                                     ; 287.69 MHz ( period = 3.476 ns )                    ; inputTrigger[0][6] ; temp[0][2]          ; clock      ; clock    ; None                        ; None                      ; 3.235 ns                ;
+; N/A                                     ; 287.69 MHz ( period = 3.476 ns )                    ; inputTrigger[0][6] ; temp[0][3]          ; clock      ; clock    ; None                        ; None                      ; 3.235 ns                ;
+; N/A                                     ; 287.69 MHz ( period = 3.476 ns )                    ; inputTrigger[0][6] ; temp[0][4]          ; clock      ; clock    ; None                        ; None                      ; 3.235 ns                ;
+; N/A                                     ; 287.69 MHz ( period = 3.476 ns )                    ; inputTrigger[0][6] ; temp[0][5]          ; clock      ; clock    ; None                        ; None                      ; 3.235 ns                ;
+; N/A                                     ; 287.69 MHz ( period = 3.476 ns )                    ; inputTrigger[0][6] ; temp[0][6]          ; clock      ; clock    ; None                        ; None                      ; 3.235 ns                ;
+; N/A                                     ; 287.69 MHz ( period = 3.476 ns )                    ; inputTrigger[0][6] ; temp[0][7]          ; clock      ; clock    ; None                        ; None                      ; 3.235 ns                ;
+; N/A                                     ; 287.77 MHz ( period = 3.475 ns )                    ; inputTrigger[0][0] ; temp[1][0]          ; clock      ; clock    ; None                        ; None                      ; 3.227 ns                ;
+; N/A                                     ; 287.94 MHz ( period = 3.473 ns )                    ; inputTrigger[0][0] ; temp[1][1]          ; clock      ; clock    ; None                        ; None                      ; 3.225 ns                ;
+; N/A                                     ; 288.93 MHz ( period = 3.461 ns )                    ; inputTrigger[0][0] ; temp[1][7]          ; clock      ; clock    ; None                        ; None                      ; 3.214 ns                ;
+; N/A                                     ; 288.93 MHz ( period = 3.461 ns )                    ; inputTrigger[1][6] ; temp[0][0]          ; clock      ; clock    ; None                        ; None                      ; 3.220 ns                ;
+; N/A                                     ; 288.93 MHz ( period = 3.461 ns )                    ; inputTrigger[1][6] ; temp[0][1]          ; clock      ; clock    ; None                        ; None                      ; 3.220 ns                ;
+; N/A                                     ; 288.93 MHz ( period = 3.461 ns )                    ; inputTrigger[1][6] ; temp[0][2]          ; clock      ; clock    ; None                        ; None                      ; 3.220 ns                ;
+; N/A                                     ; 288.93 MHz ( period = 3.461 ns )                    ; inputTrigger[1][6] ; temp[0][3]          ; clock      ; clock    ; None                        ; None                      ; 3.220 ns                ;
+; N/A                                     ; 288.93 MHz ( period = 3.461 ns )                    ; inputTrigger[1][6] ; temp[0][4]          ; clock      ; clock    ; None                        ; None                      ; 3.220 ns                ;
+; N/A                                     ; 288.93 MHz ( period = 3.461 ns )                    ; inputTrigger[1][6] ; temp[0][5]          ; clock      ; clock    ; None                        ; None                      ; 3.220 ns                ;
+; N/A                                     ; 288.93 MHz ( period = 3.461 ns )                    ; inputTrigger[1][6] ; temp[0][6]          ; clock      ; clock    ; None                        ; None                      ; 3.220 ns                ;
+; N/A                                     ; 288.93 MHz ( period = 3.461 ns )                    ; inputTrigger[1][6] ; temp[0][7]          ; clock      ; clock    ; None                        ; None                      ; 3.220 ns                ;
+; N/A                                     ; 291.04 MHz ( period = 3.436 ns )                    ; inputTrigger[1][3] ; temp[1][0]          ; clock      ; clock    ; None                        ; None                      ; 3.188 ns                ;
+; N/A                                     ; 291.21 MHz ( period = 3.434 ns )                    ; inputTrigger[1][3] ; temp[1][1]          ; clock      ; clock    ; None                        ; None                      ; 3.186 ns                ;
+; N/A                                     ; 291.21 MHz ( period = 3.434 ns )                    ; inputTrigger[1][2] ; temp[0][0]          ; clock      ; clock    ; None                        ; None                      ; 3.187 ns                ;
+; N/A                                     ; 291.21 MHz ( period = 3.434 ns )                    ; inputTrigger[1][2] ; temp[0][1]          ; clock      ; clock    ; None                        ; None                      ; 3.187 ns                ;
+; N/A                                     ; 291.21 MHz ( period = 3.434 ns )                    ; inputTrigger[1][2] ; temp[0][2]          ; clock      ; clock    ; None                        ; None                      ; 3.187 ns                ;
+; N/A                                     ; 291.21 MHz ( period = 3.434 ns )                    ; inputTrigger[1][2] ; temp[0][3]          ; clock      ; clock    ; None                        ; None                      ; 3.187 ns                ;
+; N/A                                     ; 291.21 MHz ( period = 3.434 ns )                    ; inputTrigger[1][2] ; temp[0][4]          ; clock      ; clock    ; None                        ; None                      ; 3.187 ns                ;
+; N/A                                     ; 291.21 MHz ( period = 3.434 ns )                    ; inputTrigger[1][2] ; temp[0][5]          ; clock      ; clock    ; None                        ; None                      ; 3.187 ns                ;
+; N/A                                     ; 291.21 MHz ( period = 3.434 ns )                    ; inputTrigger[1][2] ; temp[0][6]          ; clock      ; clock    ; None                        ; None                      ; 3.187 ns                ;
+; N/A                                     ; 291.21 MHz ( period = 3.434 ns )                    ; inputTrigger[1][2] ; temp[0][7]          ; clock      ; clock    ; None                        ; None                      ; 3.187 ns                ;
+; N/A                                     ; 291.29 MHz ( period = 3.433 ns )                    ; temp[2][0]         ; outputTrigger[2][3] ; clock      ; clock    ; None                        ; None                      ; 3.187 ns                ;
+; N/A                                     ; 291.29 MHz ( period = 3.433 ns )                    ; temp[2][0]         ; outputTrigger[2][7] ; clock      ; clock    ; None                        ; None                      ; 3.187 ns                ;
+; N/A                                     ; 291.46 MHz ( period = 3.431 ns )                    ; temp[2][0]         ; outputTrigger[2][2] ; clock      ; clock    ; None                        ; None                      ; 3.185 ns                ;
+; N/A                                     ; 291.46 MHz ( period = 3.431 ns )                    ; temp[2][0]         ; outputTrigger[2][6] ; clock      ; clock    ; None                        ; None                      ; 3.185 ns                ;
+; N/A                                     ; 291.63 MHz ( period = 3.429 ns )                    ; inputTrigger[1][0] ; temp[1][0]          ; clock      ; clock    ; None                        ; None                      ; 3.181 ns                ;
+; N/A                                     ; 291.80 MHz ( period = 3.427 ns )                    ; inputTrigger[1][0] ; temp[1][1]          ; clock      ; clock    ; None                        ; None                      ; 3.179 ns                ;
+; N/A                                     ; 291.80 MHz ( period = 3.427 ns )                    ; temp[2][0]         ; outputTrigger[2][5] ; clock      ; clock    ; None                        ; None                      ; 3.181 ns                ;
+; N/A                                     ; 292.14 MHz ( period = 3.423 ns )                    ; temp[1][5]         ; outputTrigger[1][0] ; clock      ; clock    ; None                        ; None                      ; 3.175 ns                ;
+; N/A                                     ; 292.14 MHz ( period = 3.423 ns )                    ; temp[1][5]         ; outputTrigger[1][1] ; clock      ; clock    ; None                        ; None                      ; 3.175 ns                ;
+; N/A                                     ; 292.14 MHz ( period = 3.423 ns )                    ; temp[1][5]         ; outputTrigger[1][2] ; clock      ; clock    ; None                        ; None                      ; 3.175 ns                ;
+; N/A                                     ; 292.14 MHz ( period = 3.423 ns )                    ; temp[1][5]         ; outputTrigger[1][3] ; clock      ; clock    ; None                        ; None                      ; 3.175 ns                ;
+; N/A                                     ; 292.14 MHz ( period = 3.423 ns )                    ; temp[1][5]         ; outputTrigger[1][4] ; clock      ; clock    ; None                        ; None                      ; 3.175 ns                ;
+; N/A                                     ; 292.14 MHz ( period = 3.423 ns )                    ; temp[1][5]         ; outputTrigger[1][5] ; clock      ; clock    ; None                        ; None                      ; 3.175 ns                ;
+; N/A                                     ; 292.14 MHz ( period = 3.423 ns )                    ; temp[1][5]         ; outputTrigger[1][6] ; clock      ; clock    ; None                        ; None                      ; 3.175 ns                ;
+; N/A                                     ; 292.14 MHz ( period = 3.423 ns )                    ; temp[1][5]         ; outputTrigger[1][7] ; clock      ; clock    ; None                        ; None                      ; 3.175 ns                ;
+; N/A                                     ; 292.23 MHz ( period = 3.422 ns )                    ; inputTrigger[1][3] ; temp[1][7]          ; clock      ; clock    ; None                        ; None                      ; 3.175 ns                ;
+; N/A                                     ; 292.31 MHz ( period = 3.421 ns )                    ; inputTrigger[0][4] ; temp[1][0]          ; clock      ; clock    ; None                        ; None                      ; 3.173 ns                ;
+; N/A                                     ; 292.31 MHz ( period = 3.421 ns )                    ; inputTrigger[0][3] ; temp[1][3]          ; clock      ; clock    ; None                        ; None                      ; 3.176 ns                ;
+; N/A                                     ; 292.48 MHz ( period = 3.419 ns )                    ; inputTrigger[0][4] ; temp[1][1]          ; clock      ; clock    ; None                        ; None                      ; 3.171 ns                ;
+; N/A                                     ; 292.57 MHz ( period = 3.418 ns )                    ; inputTrigger[0][3] ; temp[1][2]          ; clock      ; clock    ; None                        ; None                      ; 3.173 ns                ;
+; N/A                                     ; 292.83 MHz ( period = 3.415 ns )                    ; inputTrigger[1][0] ; temp[1][7]          ; clock      ; clock    ; None                        ; None                      ; 3.168 ns                ;
+; N/A                                     ; 293.08 MHz ( period = 3.412 ns )                    ; inputTrigger[0][0] ; temp[0][0]          ; clock      ; clock    ; None                        ; None                      ; 3.165 ns                ;
+; N/A                                     ; 293.08 MHz ( period = 3.412 ns )                    ; inputTrigger[0][0] ; temp[0][1]          ; clock      ; clock    ; None                        ; None                      ; 3.165 ns                ;
+; N/A                                     ; 293.08 MHz ( period = 3.412 ns )                    ; inputTrigger[0][0] ; temp[0][2]          ; clock      ; clock    ; None                        ; None                      ; 3.165 ns                ;
+; N/A                                     ; 293.08 MHz ( period = 3.412 ns )                    ; inputTrigger[0][0] ; temp[0][3]          ; clock      ; clock    ; None                        ; None                      ; 3.165 ns                ;
+; N/A                                     ; 293.08 MHz ( period = 3.412 ns )                    ; inputTrigger[0][0] ; temp[0][4]          ; clock      ; clock    ; None                        ; None                      ; 3.165 ns                ;
+; N/A                                     ; 293.08 MHz ( period = 3.412 ns )                    ; inputTrigger[0][0] ; temp[0][5]          ; clock      ; clock    ; None                        ; None                      ; 3.165 ns                ;
+; N/A                                     ; 293.08 MHz ( period = 3.412 ns )                    ; inputTrigger[0][0] ; temp[0][6]          ; clock      ; clock    ; None                        ; None                      ; 3.165 ns                ;
+; N/A                                     ; 293.08 MHz ( period = 3.412 ns )                    ; inputTrigger[0][0] ; temp[0][7]          ; clock      ; clock    ; None                        ; None                      ; 3.165 ns                ;
+; N/A                                     ; 293.26 MHz ( period = 3.410 ns )                    ; temp[1][2]         ; outputTrigger[1][0] ; clock      ; clock    ; None                        ; None                      ; 3.162 ns                ;
+; N/A                                     ; 293.26 MHz ( period = 3.410 ns )                    ; temp[1][2]         ; outputTrigger[1][1] ; clock      ; clock    ; None                        ; None                      ; 3.162 ns                ;
+; N/A                                     ; 293.26 MHz ( period = 3.410 ns )                    ; temp[1][2]         ; outputTrigger[1][2] ; clock      ; clock    ; None                        ; None                      ; 3.162 ns                ;
+; N/A                                     ; 293.26 MHz ( period = 3.410 ns )                    ; temp[1][2]         ; outputTrigger[1][3] ; clock      ; clock    ; None                        ; None                      ; 3.162 ns                ;
+; N/A                                     ; 293.26 MHz ( period = 3.410 ns )                    ; temp[1][2]         ; outputTrigger[1][4] ; clock      ; clock    ; None                        ; None                      ; 3.162 ns                ;
+; N/A                                     ; 293.26 MHz ( period = 3.410 ns )                    ; temp[1][2]         ; outputTrigger[1][5] ; clock      ; clock    ; None                        ; None                      ; 3.162 ns                ;
+; N/A                                     ; 293.26 MHz ( period = 3.410 ns )                    ; temp[1][2]         ; outputTrigger[1][6] ; clock      ; clock    ; None                        ; None                      ; 3.162 ns                ;
+; N/A                                     ; 293.26 MHz ( period = 3.410 ns )                    ; temp[1][2]         ; outputTrigger[1][7] ; clock      ; clock    ; None                        ; None                      ; 3.162 ns                ;
+; N/A                                     ; 293.51 MHz ( period = 3.407 ns )                    ; inputTrigger[0][4] ; temp[1][7]          ; clock      ; clock    ; None                        ; None                      ; 3.160 ns                ;
+; N/A                                     ; 293.94 MHz ( period = 3.402 ns )                    ; temp[2][3]         ; outputTrigger[2][3] ; clock      ; clock    ; None                        ; None                      ; 3.155 ns                ;
+; N/A                                     ; 293.94 MHz ( period = 3.402 ns )                    ; temp[2][3]         ; outputTrigger[2][7] ; clock      ; clock    ; None                        ; None                      ; 3.155 ns                ;
+; N/A                                     ; 294.12 MHz ( period = 3.400 ns )                    ; temp[2][3]         ; outputTrigger[2][2] ; clock      ; clock    ; None                        ; None                      ; 3.153 ns                ;
+; N/A                                     ; 294.12 MHz ( period = 3.400 ns )                    ; temp[2][3]         ; outputTrigger[2][6] ; clock      ; clock    ; None                        ; None                      ; 3.153 ns                ;
+; N/A                                     ; 294.46 MHz ( period = 3.396 ns )                    ; temp[2][3]         ; outputTrigger[2][5] ; clock      ; clock    ; None                        ; None                      ; 3.149 ns                ;
+; N/A                                     ; 294.72 MHz ( period = 3.393 ns )                    ; inputTrigger[1][1] ; temp[1][0]          ; clock      ; clock    ; None                        ; None                      ; 3.145 ns                ;
+; N/A                                     ; 294.90 MHz ( period = 3.391 ns )                    ; inputTrigger[1][1] ; temp[1][1]          ; clock      ; clock    ; None                        ; None                      ; 3.143 ns                ;
+; N/A                                     ; 295.95 MHz ( period = 3.379 ns )                    ; inputTrigger[1][1] ; temp[1][7]          ; clock      ; clock    ; None                        ; None                      ; 3.132 ns                ;
+; N/A                                     ; 296.03 MHz ( period = 3.378 ns )                    ; inputTrigger[1][5] ; temp[1][3]          ; clock      ; clock    ; None                        ; None                      ; 3.136 ns                ;
+; N/A                                     ; 296.30 MHz ( period = 3.375 ns )                    ; inputTrigger[1][5] ; temp[1][2]          ; clock      ; clock    ; None                        ; None                      ; 3.133 ns                ;
+; N/A                                     ; 296.47 MHz ( period = 3.373 ns )                    ; temp[2][5]         ; outputTrigger[1][0] ; clock      ; clock    ; None                        ; None                      ; 3.125 ns                ;
+; N/A                                     ; 296.47 MHz ( period = 3.373 ns )                    ; temp[2][5]         ; outputTrigger[1][1] ; clock      ; clock    ; None                        ; None                      ; 3.125 ns                ;
+; N/A                                     ; 296.47 MHz ( period = 3.373 ns )                    ; temp[2][5]         ; outputTrigger[1][2] ; clock      ; clock    ; None                        ; None                      ; 3.125 ns                ;
+; N/A                                     ; 296.47 MHz ( period = 3.373 ns )                    ; temp[2][5]         ; outputTrigger[1][3] ; clock      ; clock    ; None                        ; None                      ; 3.125 ns                ;
+; N/A                                     ; 296.47 MHz ( period = 3.373 ns )                    ; temp[2][5]         ; outputTrigger[1][4] ; clock      ; clock    ; None                        ; None                      ; 3.125 ns                ;
+; N/A                                     ; 296.47 MHz ( period = 3.373 ns )                    ; temp[2][5]         ; outputTrigger[1][5] ; clock      ; clock    ; None                        ; None                      ; 3.125 ns                ;
+; N/A                                     ; 296.47 MHz ( period = 3.373 ns )                    ; temp[2][5]         ; outputTrigger[1][6] ; clock      ; clock    ; None                        ; None                      ; 3.125 ns                ;
+; N/A                                     ; 296.47 MHz ( period = 3.373 ns )                    ; temp[2][5]         ; outputTrigger[1][7] ; clock      ; clock    ; None                        ; None                      ; 3.125 ns                ;
+; N/A                                     ; 296.47 MHz ( period = 3.373 ns )                    ; inputTrigger[1][3] ; temp[0][0]          ; clock      ; clock    ; None                        ; None                      ; 3.126 ns                ;
+; N/A                                     ; 296.47 MHz ( period = 3.373 ns )                    ; inputTrigger[1][3] ; temp[0][1]          ; clock      ; clock    ; None                        ; None                      ; 3.126 ns                ;
+; N/A                                     ; 296.47 MHz ( period = 3.373 ns )                    ; inputTrigger[1][3] ; temp[0][2]          ; clock      ; clock    ; None                        ; None                      ; 3.126 ns                ;
+; N/A                                     ; 296.47 MHz ( period = 3.373 ns )                    ; inputTrigger[1][3] ; temp[0][3]          ; clock      ; clock    ; None                        ; None                      ; 3.126 ns                ;
+; N/A                                     ; 296.47 MHz ( period = 3.373 ns )                    ; inputTrigger[1][3] ; temp[0][4]          ; clock      ; clock    ; None                        ; None                      ; 3.126 ns                ;
+; N/A                                     ; 296.47 MHz ( period = 3.373 ns )                    ; inputTrigger[1][3] ; temp[0][5]          ; clock      ; clock    ; None                        ; None                      ; 3.126 ns                ;
+; N/A                                     ; 296.47 MHz ( period = 3.373 ns )                    ; inputTrigger[1][3] ; temp[0][6]          ; clock      ; clock    ; None                        ; None                      ; 3.126 ns                ;
+; N/A                                     ; 296.47 MHz ( period = 3.373 ns )                    ; inputTrigger[1][3] ; temp[0][7]          ; clock      ; clock    ; None                        ; None                      ; 3.126 ns                ;
+; N/A                                     ; 297.09 MHz ( period = 3.366 ns )                    ; inputTrigger[1][0] ; temp[0][0]          ; clock      ; clock    ; None                        ; None                      ; 3.119 ns                ;
+; N/A                                     ; 297.09 MHz ( period = 3.366 ns )                    ; inputTrigger[1][0] ; temp[0][1]          ; clock      ; clock    ; None                        ; None                      ; 3.119 ns                ;
+; N/A                                     ; 297.09 MHz ( period = 3.366 ns )                    ; inputTrigger[1][0] ; temp[0][2]          ; clock      ; clock    ; None                        ; None                      ; 3.119 ns                ;
+; N/A                                     ; 297.09 MHz ( period = 3.366 ns )                    ; inputTrigger[1][0] ; temp[0][3]          ; clock      ; clock    ; None                        ; None                      ; 3.119 ns                ;
+; N/A                                     ; 297.09 MHz ( period = 3.366 ns )                    ; inputTrigger[1][0] ; temp[0][4]          ; clock      ; clock    ; None                        ; None                      ; 3.119 ns                ;
+; N/A                                     ; 297.09 MHz ( period = 3.366 ns )                    ; inputTrigger[1][0] ; temp[0][5]          ; clock      ; clock    ; None                        ; None                      ; 3.119 ns                ;
+; N/A                                     ; 297.09 MHz ( period = 3.366 ns )                    ; inputTrigger[1][0] ; temp[0][6]          ; clock      ; clock    ; None                        ; None                      ; 3.119 ns                ;
+; N/A                                     ; 297.09 MHz ( period = 3.366 ns )                    ; inputTrigger[1][0] ; temp[0][7]          ; clock      ; clock    ; None                        ; None                      ; 3.119 ns                ;
+; N/A                                     ; 297.18 MHz ( period = 3.365 ns )                    ; inputTrigger[0][1] ; temp[1][0]          ; clock      ; clock    ; None                        ; None                      ; 3.117 ns                ;
+; N/A                                     ; 297.35 MHz ( period = 3.363 ns )                    ; inputTrigger[0][1] ; temp[1][1]          ; clock      ; clock    ; None                        ; None                      ; 3.115 ns                ;
+; N/A                                     ; 297.80 MHz ( period = 3.358 ns )                    ; temp[1][0]         ; outputTrigger[1][0] ; clock      ; clock    ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 297.80 MHz ( period = 3.358 ns )                    ; temp[1][0]         ; outputTrigger[1][1] ; clock      ; clock    ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 297.80 MHz ( period = 3.358 ns )                    ; temp[1][0]         ; outputTrigger[1][2] ; clock      ; clock    ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 297.80 MHz ( period = 3.358 ns )                    ; temp[1][0]         ; outputTrigger[1][3] ; clock      ; clock    ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 297.80 MHz ( period = 3.358 ns )                    ; temp[1][0]         ; outputTrigger[1][4] ; clock      ; clock    ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 297.80 MHz ( period = 3.358 ns )                    ; temp[1][0]         ; outputTrigger[1][5] ; clock      ; clock    ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 297.80 MHz ( period = 3.358 ns )                    ; temp[1][0]         ; outputTrigger[1][6] ; clock      ; clock    ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 297.80 MHz ( period = 3.358 ns )                    ; temp[1][0]         ; outputTrigger[1][7] ; clock      ; clock    ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 297.80 MHz ( period = 3.358 ns )                    ; inputTrigger[0][4] ; temp[0][0]          ; clock      ; clock    ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 297.80 MHz ( period = 3.358 ns )                    ; inputTrigger[0][4] ; temp[0][1]          ; clock      ; clock    ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 297.80 MHz ( period = 3.358 ns )                    ; inputTrigger[0][4] ; temp[0][2]          ; clock      ; clock    ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 297.80 MHz ( period = 3.358 ns )                    ; inputTrigger[0][4] ; temp[0][3]          ; clock      ; clock    ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 297.80 MHz ( period = 3.358 ns )                    ; inputTrigger[0][4] ; temp[0][4]          ; clock      ; clock    ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 297.80 MHz ( period = 3.358 ns )                    ; inputTrigger[0][4] ; temp[0][5]          ; clock      ; clock    ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 297.80 MHz ( period = 3.358 ns )                    ; inputTrigger[0][4] ; temp[0][6]          ; clock      ; clock    ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 297.80 MHz ( period = 3.358 ns )                    ; inputTrigger[0][4] ; temp[0][7]          ; clock      ; clock    ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 298.42 MHz ( period = 3.351 ns )                    ; inputTrigger[0][1] ; temp[1][7]          ; clock      ; clock    ; None                        ; None                      ; 3.104 ns                ;
+; N/A                                     ; 298.60 MHz ( period = 3.349 ns )                    ; inputTrigger[0][7] ; temp[1][0]          ; clock      ; clock    ; None                        ; None                      ; 3.101 ns                ;
+; N/A                                     ; 298.78 MHz ( period = 3.347 ns )                    ; inputTrigger[0][7] ; temp[1][1]          ; clock      ; clock    ; None                        ; None                      ; 3.099 ns                ;
+; N/A                                     ; 299.31 MHz ( period = 3.341 ns )                    ; temp[2][2]         ; outputTrigger[1][6] ; clock      ; clock    ; None                        ; None                      ; 3.093 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                    ;                     ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+--------------------+---------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; tsu                                                                                 ;
++-------+--------------+------------+-----------------+--------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From            ; To                 ; To Clock ;
++-------+--------------+------------+-----------------+--------------------+----------+
+; N/A   ; None         ; 4.965 ns   ; inputData[0][1] ; inputTrigger[0][1] ; clock    ;
+; N/A   ; None         ; 4.862 ns   ; inputData[0][0] ; inputTrigger[0][0] ; clock    ;
+; N/A   ; None         ; 4.714 ns   ; inputData[2][0] ; inputTrigger[2][0] ; clock    ;
+; N/A   ; None         ; 4.624 ns   ; inputData[1][0] ; inputTrigger[1][0] ; clock    ;
+; N/A   ; None         ; 4.568 ns   ; inputData[1][5] ; inputTrigger[1][5] ; clock    ;
+; N/A   ; None         ; 4.561 ns   ; inputData[2][5] ; inputTrigger[2][5] ; clock    ;
+; N/A   ; None         ; 4.547 ns   ; inputData[2][3] ; inputTrigger[2][3] ; clock    ;
+; N/A   ; None         ; 4.524 ns   ; inputData[0][4] ; inputTrigger[0][4] ; clock    ;
+; N/A   ; None         ; 4.471 ns   ; inputData[0][3] ; inputTrigger[0][3] ; clock    ;
+; N/A   ; None         ; 4.433 ns   ; inputData[1][7] ; inputTrigger[1][7] ; clock    ;
+; N/A   ; None         ; 4.418 ns   ; inputData[2][2] ; inputTrigger[2][2] ; clock    ;
+; N/A   ; None         ; 4.329 ns   ; inputData[1][4] ; inputTrigger[1][4] ; clock    ;
+; N/A   ; None         ; 4.327 ns   ; inputData[2][7] ; inputTrigger[2][7] ; clock    ;
+; N/A   ; None         ; 4.214 ns   ; inputData[0][2] ; inputTrigger[0][2] ; clock    ;
+; N/A   ; None         ; 4.194 ns   ; inputData[1][2] ; inputTrigger[1][2] ; clock    ;
+; N/A   ; None         ; 4.178 ns   ; inputData[0][5] ; inputTrigger[0][5] ; clock    ;
+; N/A   ; None         ; 4.176 ns   ; inputData[1][6] ; inputTrigger[1][6] ; clock    ;
+; N/A   ; None         ; 4.175 ns   ; inputData[1][1] ; inputTrigger[1][1] ; clock    ;
+; N/A   ; None         ; 4.132 ns   ; inputData[2][6] ; inputTrigger[2][6] ; clock    ;
+; N/A   ; None         ; 4.124 ns   ; inputData[0][6] ; inputTrigger[0][6] ; clock    ;
+; N/A   ; None         ; 4.088 ns   ; inputData[1][3] ; inputTrigger[1][3] ; clock    ;
+; N/A   ; None         ; 4.029 ns   ; inputData[2][1] ; inputTrigger[2][1] ; clock    ;
+; N/A   ; None         ; 4.027 ns   ; inputData[0][7] ; inputTrigger[0][7] ; clock    ;
+; N/A   ; None         ; 3.968 ns   ; inputData[2][4] ; inputTrigger[2][4] ; clock    ;
++-------+--------------+------------+-----------------+--------------------+----------+
+
+
++-----------------------------------------------------------------------------------------+
+; tco                                                                                     ;
++-------+--------------+------------+---------------------+------------------+------------+
+; Slack ; Required tco ; Actual tco ; From                ; To               ; From Clock ;
++-------+--------------+------------+---------------------+------------------+------------+
+; N/A   ; None         ; 8.631 ns   ; outputTrigger[2][2] ; outputData[2][2] ; clock      ;
+; N/A   ; None         ; 8.615 ns   ; outputTrigger[1][5] ; outputData[1][5] ; clock      ;
+; N/A   ; None         ; 8.599 ns   ; outputTrigger[1][7] ; outputData[1][7] ; clock      ;
+; N/A   ; None         ; 8.487 ns   ; outputTrigger[1][0] ; outputData[1][0] ; clock      ;
+; N/A   ; None         ; 8.479 ns   ; outputTrigger[2][3] ; outputData[2][3] ; clock      ;
+; N/A   ; None         ; 8.450 ns   ; outputTrigger[2][0] ; outputData[2][0] ; clock      ;
+; N/A   ; None         ; 8.252 ns   ; outputTrigger[0][1] ; outputData[0][1] ; clock      ;
+; N/A   ; None         ; 8.239 ns   ; outputTrigger[1][2] ; outputData[1][2] ; clock      ;
+; N/A   ; None         ; 8.226 ns   ; outputTrigger[0][3] ; outputData[0][3] ; clock      ;
+; N/A   ; None         ; 8.189 ns   ; outputTrigger[1][4] ; outputData[1][4] ; clock      ;
+; N/A   ; None         ; 8.184 ns   ; outputTrigger[1][3] ; outputData[1][3] ; clock      ;
+; N/A   ; None         ; 8.160 ns   ; outputTrigger[2][7] ; outputData[2][7] ; clock      ;
+; N/A   ; None         ; 8.149 ns   ; outputTrigger[0][6] ; outputData[0][6] ; clock      ;
+; N/A   ; None         ; 8.143 ns   ; outputTrigger[2][5] ; outputData[2][5] ; clock      ;
+; N/A   ; None         ; 8.140 ns   ; outputTrigger[2][6] ; outputData[2][6] ; clock      ;
+; N/A   ; None         ; 8.112 ns   ; outputTrigger[0][2] ; outputData[0][2] ; clock      ;
+; N/A   ; None         ; 7.949 ns   ; outputTrigger[0][7] ; outputData[0][7] ; clock      ;
+; N/A   ; None         ; 7.848 ns   ; outputTrigger[0][0] ; outputData[0][0] ; clock      ;
+; N/A   ; None         ; 7.845 ns   ; outputTrigger[1][1] ; outputData[1][1] ; clock      ;
+; N/A   ; None         ; 7.819 ns   ; outputTrigger[0][5] ; outputData[0][5] ; clock      ;
+; N/A   ; None         ; 7.818 ns   ; outputTrigger[2][1] ; outputData[2][1] ; clock      ;
+; N/A   ; None         ; 7.806 ns   ; outputTrigger[1][6] ; outputData[1][6] ; clock      ;
+; N/A   ; None         ; 7.592 ns   ; outputTrigger[2][4] ; outputData[2][4] ; clock      ;
+; N/A   ; None         ; 7.483 ns   ; outputTrigger[0][4] ; outputData[0][4] ; clock      ;
++-------+--------------+------------+---------------------+------------------+------------+
+
+
++-------------------------------------------------------------------------------------------+
+; th                                                                                        ;
++---------------+-------------+-----------+-----------------+--------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From            ; To                 ; To Clock ;
++---------------+-------------+-----------+-----------------+--------------------+----------+
+; N/A           ; None        ; -3.711 ns ; inputData[2][4] ; inputTrigger[2][4] ; clock    ;
+; N/A           ; None        ; -3.770 ns ; inputData[0][7] ; inputTrigger[0][7] ; clock    ;
+; N/A           ; None        ; -3.772 ns ; inputData[2][1] ; inputTrigger[2][1] ; clock    ;
+; N/A           ; None        ; -3.831 ns ; inputData[1][3] ; inputTrigger[1][3] ; clock    ;
+; N/A           ; None        ; -3.867 ns ; inputData[0][6] ; inputTrigger[0][6] ; clock    ;
+; N/A           ; None        ; -3.875 ns ; inputData[2][6] ; inputTrigger[2][6] ; clock    ;
+; N/A           ; None        ; -3.918 ns ; inputData[1][1] ; inputTrigger[1][1] ; clock    ;
+; N/A           ; None        ; -3.919 ns ; inputData[1][6] ; inputTrigger[1][6] ; clock    ;
+; N/A           ; None        ; -3.921 ns ; inputData[0][5] ; inputTrigger[0][5] ; clock    ;
+; N/A           ; None        ; -3.937 ns ; inputData[1][2] ; inputTrigger[1][2] ; clock    ;
+; N/A           ; None        ; -3.957 ns ; inputData[0][2] ; inputTrigger[0][2] ; clock    ;
+; N/A           ; None        ; -4.070 ns ; inputData[2][7] ; inputTrigger[2][7] ; clock    ;
+; N/A           ; None        ; -4.072 ns ; inputData[1][4] ; inputTrigger[1][4] ; clock    ;
+; N/A           ; None        ; -4.161 ns ; inputData[2][2] ; inputTrigger[2][2] ; clock    ;
+; N/A           ; None        ; -4.176 ns ; inputData[1][7] ; inputTrigger[1][7] ; clock    ;
+; N/A           ; None        ; -4.214 ns ; inputData[0][3] ; inputTrigger[0][3] ; clock    ;
+; N/A           ; None        ; -4.267 ns ; inputData[0][4] ; inputTrigger[0][4] ; clock    ;
+; N/A           ; None        ; -4.290 ns ; inputData[2][3] ; inputTrigger[2][3] ; clock    ;
+; N/A           ; None        ; -4.304 ns ; inputData[2][5] ; inputTrigger[2][5] ; clock    ;
+; N/A           ; None        ; -4.311 ns ; inputData[1][5] ; inputTrigger[1][5] ; clock    ;
+; N/A           ; None        ; -4.367 ns ; inputData[1][0] ; inputTrigger[1][0] ; clock    ;
+; N/A           ; None        ; -4.457 ns ; inputData[2][0] ; inputTrigger[2][0] ; clock    ;
+; N/A           ; None        ; -4.605 ns ; inputData[0][0] ; inputTrigger[0][0] ; clock    ;
+; N/A           ; None        ; -4.708 ns ; inputData[0][1] ; inputTrigger[0][1] ; clock    ;
++---------------+-------------+-----------+-----------------+--------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 8.1 Build 163 10/28/2008 SJ Full Version
+    Info: Processing started: Tue Dec 25 21:35:39 2018
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off bubbleSort -c bubbleSort --timing_analysis_only
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clock" is an undefined clock
+Info: Clock "clock" has Internal fmax of 269.32 MHz between source register "inputTrigger[0][3]" and destination register "temp[1][0]" (period= 3.713 ns)
+    Info: + Longest register to register delay is 3.467 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X19_Y18_N9; Fanout = 4; REG Node = 'inputTrigger[0][3]'
+        Info: 2: + IC(0.887 ns) + CELL(0.535 ns) = 1.422 ns; Loc. = LCCOMB_X23_Y18_N8; Fanout = 2; COMB Node = 'temp[0][3]~183'
+        Info: 3: + IC(0.000 ns) + CELL(0.082 ns) = 1.504 ns; Loc. = LCCOMB_X23_Y18_N10; Fanout = 2; COMB Node = 'temp[0][4]~185'
+        Info: 4: + IC(0.000 ns) + CELL(0.082 ns) = 1.586 ns; Loc. = LCCOMB_X23_Y18_N12; Fanout = 2; COMB Node = 'temp[0][5]~187'
+        Info: 5: + IC(0.000 ns) + CELL(0.180 ns) = 1.766 ns; Loc. = LCCOMB_X23_Y18_N14; Fanout = 2; COMB Node = 'temp[0][6]~189'
+        Info: 6: + IC(0.000 ns) + CELL(0.082 ns) = 1.848 ns; Loc. = LCCOMB_X23_Y18_N16; Fanout = 1; COMB Node = 'temp[0][7]~191'
+        Info: 7: + IC(0.000 ns) + CELL(0.474 ns) = 2.322 ns; Loc. = LCCOMB_X23_Y18_N18; Fanout = 16; COMB Node = 'op_1~33'
+        Info: 8: + IC(0.861 ns) + CELL(0.184 ns) = 3.367 ns; Loc. = LCCOMB_X21_Y18_N2; Fanout = 1; COMB Node = 'temp[1][0]~192'
+        Info: 9: + IC(0.000 ns) + CELL(0.100 ns) = 3.467 ns; Loc. = LCFF_X21_Y18_N3; Fanout = 4; REG Node = 'temp[1][0]'
+        Info: Total cell delay = 1.719 ns ( 49.58 % )
+        Info: Total interconnect delay = 1.748 ns ( 50.42 % )
+    Info: - Smallest clock skew is 0.001 ns
+        Info: + Shortest clock path from clock "clock" to destination register is 2.945 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.059 ns) = 1.059 ns; Loc. = PIN_M1; Fanout = 1; CLK Node = 'clock'
+            Info: 2: + IC(0.246 ns) + CELL(0.000 ns) = 1.305 ns; Loc. = CLKCTRL_G3; Fanout = 72; COMB Node = 'clock~clkctrl'
+            Info: 3: + IC(1.017 ns) + CELL(0.623 ns) = 2.945 ns; Loc. = LCFF_X21_Y18_N3; Fanout = 4; REG Node = 'temp[1][0]'
+            Info: Total cell delay = 1.682 ns ( 57.11 % )
+            Info: Total interconnect delay = 1.263 ns ( 42.89 % )
+        Info: - Longest clock path from clock "clock" to source register is 2.944 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.059 ns) = 1.059 ns; Loc. = PIN_M1; Fanout = 1; CLK Node = 'clock'
+            Info: 2: + IC(0.246 ns) + CELL(0.000 ns) = 1.305 ns; Loc. = CLKCTRL_G3; Fanout = 72; COMB Node = 'clock~clkctrl'
+            Info: 3: + IC(1.016 ns) + CELL(0.623 ns) = 2.944 ns; Loc. = LCFF_X19_Y18_N9; Fanout = 4; REG Node = 'inputTrigger[0][3]'
+            Info: Total cell delay = 1.682 ns ( 57.13 % )
+            Info: Total interconnect delay = 1.262 ns ( 42.87 % )
+    Info: + Micro clock to output delay of source is 0.286 ns
+    Info: + Micro setup delay of destination is -0.039 ns
+Info: tsu for register "inputTrigger[0][1]" (data pin = "inputData[0][1]", clock pin = "clock") is 4.965 ns
+    Info: + Longest pin to register delay is 7.950 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.880 ns) = 0.880 ns; Loc. = PIN_C13; Fanout = 1; PIN Node = 'inputData[0][1]'
+        Info: 2: + IC(6.786 ns) + CELL(0.184 ns) = 7.850 ns; Loc. = LCCOMB_X23_Y18_N22; Fanout = 1; COMB Node = 'inputTrigger[0][1]~feeder'
+        Info: 3: + IC(0.000 ns) + CELL(0.100 ns) = 7.950 ns; Loc. = LCFF_X23_Y18_N23; Fanout = 4; REG Node = 'inputTrigger[0][1]'
+        Info: Total cell delay = 1.164 ns ( 14.64 % )
+        Info: Total interconnect delay = 6.786 ns ( 85.36 % )
+    Info: + Micro setup delay of destination is -0.039 ns
+    Info: - Shortest clock path from clock "clock" to destination register is 2.946 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.059 ns) = 1.059 ns; Loc. = PIN_M1; Fanout = 1; CLK Node = 'clock'
+        Info: 2: + IC(0.246 ns) + CELL(0.000 ns) = 1.305 ns; Loc. = CLKCTRL_G3; Fanout = 72; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(1.018 ns) + CELL(0.623 ns) = 2.946 ns; Loc. = LCFF_X23_Y18_N23; Fanout = 4; REG Node = 'inputTrigger[0][1]'
+        Info: Total cell delay = 1.682 ns ( 57.09 % )
+        Info: Total interconnect delay = 1.264 ns ( 42.91 % )
+Info: tco from clock "clock" to destination pin "outputData[2][2]" through register "outputTrigger[2][2]" is 8.631 ns
+    Info: + Longest clock path from clock "clock" to source register is 2.946 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.059 ns) = 1.059 ns; Loc. = PIN_M1; Fanout = 1; CLK Node = 'clock'
+        Info: 2: + IC(0.246 ns) + CELL(0.000 ns) = 1.305 ns; Loc. = CLKCTRL_G3; Fanout = 72; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(1.018 ns) + CELL(0.623 ns) = 2.946 ns; Loc. = LCFF_X22_Y18_N9; Fanout = 1; REG Node = 'outputTrigger[2][2]'
+        Info: Total cell delay = 1.682 ns ( 57.09 % )
+        Info: Total interconnect delay = 1.264 ns ( 42.91 % )
+    Info: + Micro clock to output delay of source is 0.286 ns
+    Info: + Longest register to pin delay is 5.399 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X22_Y18_N9; Fanout = 1; REG Node = 'outputTrigger[2][2]'
+        Info: 2: + IC(2.322 ns) + CELL(3.077 ns) = 5.399 ns; Loc. = PIN_V11; Fanout = 0; PIN Node = 'outputData[2][2]'
+        Info: Total cell delay = 3.077 ns ( 56.99 % )
+        Info: Total interconnect delay = 2.322 ns ( 43.01 % )
+Info: th for register "inputTrigger[2][4]" (data pin = "inputData[2][4]", clock pin = "clock") is -3.711 ns
+    Info: + Longest clock path from clock "clock" to destination register is 2.945 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.059 ns) = 1.059 ns; Loc. = PIN_M1; Fanout = 1; CLK Node = 'clock'
+        Info: 2: + IC(0.246 ns) + CELL(0.000 ns) = 1.305 ns; Loc. = CLKCTRL_G3; Fanout = 72; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(1.017 ns) + CELL(0.623 ns) = 2.945 ns; Loc. = LCFF_X20_Y18_N3; Fanout = 1; REG Node = 'inputTrigger[2][4]'
+        Info: Total cell delay = 1.682 ns ( 57.11 % )
+        Info: Total interconnect delay = 1.263 ns ( 42.89 % )
+    Info: + Micro hold delay of destination is 0.296 ns
+    Info: - Shortest pin to register delay is 6.952 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.881 ns) = 0.881 ns; Loc. = PIN_J4; Fanout = 1; PIN Node = 'inputData[2][4]'
+        Info: 2: + IC(5.787 ns) + CELL(0.184 ns) = 6.852 ns; Loc. = LCCOMB_X20_Y18_N2; Fanout = 1; COMB Node = 'inputTrigger[2][4]~feeder'
+        Info: 3: + IC(0.000 ns) + CELL(0.100 ns) = 6.952 ns; Loc. = LCFF_X20_Y18_N3; Fanout = 1; REG Node = 'inputTrigger[2][4]'
+        Info: Total cell delay = 1.165 ns ( 16.76 % )
+        Info: Total interconnect delay = 5.787 ns ( 83.24 % )
+Info: Parallel compilation was enabled but no parallel operations were performed
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 216 megabytes
+    Info: Processing ended: Tue Dec 25 21:35:39 2018
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

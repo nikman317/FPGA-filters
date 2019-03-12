@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Dec 26 12:44:38 2018
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Full Version
+Revision Name : testFilters
+Top-level Entity Name : testFilters
+Family : Cyclone II
+Device : EP2C20AF484A7
+Timing Models : Final
+Total logic elements : 262 / 18,752 ( 1 % )
+    Total combinational functions : 183 / 18,752 ( < 1 % )
+    Dedicated logic registers : 239 / 18,752 ( 1 % )
+Total registers : 239
+Total pins : 17 / 315 ( 5 % )
+Total virtual pins : 0
+Total memory bits : 112 / 239,616 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 52 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

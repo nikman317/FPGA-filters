@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Dec 26 12:52:23 2018
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Full Version
+Revision Name : filterLF
+Top-level Entity Name : filterLF
+Family : Cyclone II
+Total logic elements : 31
+    Total combinational functions : 31
+    Dedicated logic registers : 30
+Total registers : 30
+Total pins : 17
+Total virtual pins : 0
+Total memory bits : 48
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

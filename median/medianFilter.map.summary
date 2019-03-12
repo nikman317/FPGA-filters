@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Dec 26 13:49:00 2018
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Full Version
+Revision Name : medianFilter
+Top-level Entity Name : medianFilter
+Family : Cyclone II
+Total logic elements : 92
+    Total combinational functions : 59
+    Dedicated logic registers : 92
+Total registers : 92
+Total pins : 17
+Total virtual pins : 0
+Total memory bits : 48
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

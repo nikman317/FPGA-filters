@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Dec 26 12:44:34 2018
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Full Version
+Revision Name : testFilters
+Top-level Entity Name : testFilters
+Family : Cyclone II
+Total logic elements : 239
+    Total combinational functions : 183
+    Dedicated logic registers : 239
+Total registers : 239
+Total pins : 17
+Total virtual pins : 0
+Total memory bits : 112
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

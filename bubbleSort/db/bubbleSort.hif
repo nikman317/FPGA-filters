@@ -1,0 +1,53 @@
+Version 8.1 Build 163 10/28/2008 SJ Full Version
+11
+998
+OFF
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+lib|
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+bubbleSort
+# storage
+db|bubbleSort.(0).cnf
+db|bubbleSort.(0).cnf
+# case_insensitive
+# source_file
+bubbleSort.tdf
+f3270d2f220456dd70acf46182c8a7
+7
+# user_parameter {
+WIDTH
+3
+PARAMETER_UNKNOWN
+DEF
+}
+# used_port {
+0
+-1
+0
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

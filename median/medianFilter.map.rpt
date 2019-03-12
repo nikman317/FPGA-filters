@@ -1,0 +1,388 @@
+Analysis & Synthesis report for medianFilter
+Wed Dec 26 13:49:00 2018
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Analysis & Synthesis RAM Summary
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Source assignments for bubbleSort:sorters[0]|altshift_taps:outputTrigger_rtl_0|shift_taps_q1m:auto_generated|altsyncram_hg31:altsyncram4
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |medianFilter
+ 12. Parameter Settings for User Entity Instance: bubbleSort:sorters[2]
+ 13. Parameter Settings for User Entity Instance: bubbleSort:sorters[1]
+ 14. Parameter Settings for User Entity Instance: bubbleSort:sorters[0]
+ 15. Parameter Settings for Inferred Entity Instance: bubbleSort:sorters[0]|altshift_taps:outputTrigger_rtl_0
+ 16. altshift_taps Parameter Settings by Entity Instance
+ 17. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++------------------------------------+------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Dec 26 13:49:00 2018    ;
+; Quartus II Version                 ; 8.1 Build 163 10/28/2008 SJ Full Version ;
+; Revision Name                      ; medianFilter                             ;
+; Top-level Entity Name              ; medianFilter                             ;
+; Family                             ; Cyclone II                               ;
+; Total logic elements               ; 92                                       ;
+;     Total combinational functions  ; 59                                       ;
+;     Dedicated logic registers      ; 92                                       ;
+; Total registers                    ; 92                                       ;
+; Total pins                         ; 17                                       ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 48                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                        ;
+; Total PLLs                         ; 0                                        ;
++------------------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                            ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Option                                                         ; Setting            ; Default Value      ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Device                                                         ; EP2C20AF484A7      ;                    ;
+; Top-level entity name                                          ; medianFilter       ; medianFilter       ;
+; Family name                                                    ; Cyclone II         ; Stratix II         ;
+; Use Generated Physical Constraints File                        ; Off                ;                    ;
+; Use smart compilation                                          ; Off                ; Off                ;
+; Restructure Multiplexers                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                            ; Off                ; Off                ;
+; Preserve fewer node names                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                      ; Off                ; Off                ;
+; Verilog Version                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                       ; Auto               ; Auto               ;
+; Safe State Machine                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                              ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                     ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                 ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                        ; On                 ; On                 ;
+; Parallel Synthesis                                             ; Off                ; Off                ;
+; DSP Block Balancing                                            ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                 ; Off                ; Off                ;
+; Optimization Technique                                         ; Balanced           ; Balanced           ;
+; Carry Chain Length                                             ; 70                 ; 70                 ;
+; Auto Carry Chains                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                          ; Off                ; Off                ;
+; Perform gate-level register retiming                           ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax         ; On                 ; On                 ;
+; Auto ROM Replacement                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                           ; On                 ; On                 ;
+; Auto Shift Register Replacement                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                  ; On                 ; On                 ;
+; Strict RAM Replacement                                         ; Off                ; Off                ;
+; Allow Synchronous Control Signals                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                         ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                              ; Off                ; Off                ;
+; Auto Resource Sharing                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                  ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing            ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives              ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                             ; Off                ; Off                ;
+; Synchronization Register Chain Length                          ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report       ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report      ; 100                ; 100                ;
+; Clock MUX Protection                                           ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                    ; Off                ; Off                ;
+; Block Design Naming                                            ; Auto               ; Auto               ;
+; SDC constraint protection                                      ; Off                ; Off                ;
+; Synthesis Effort                                               ; Auto               ; Auto               ;
+; Allows Asynchronous Clear Usage For Shift Register Replacement ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                             ; Medium             ; Medium             ;
++----------------------------------------------------------------+--------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                      ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+
+; medianFilter.tdf                 ; yes             ; User AHDL File               ; C:/Users/Никита/Desktop/filters/median/medianFilter.tdf           ;
+; bubbleSort.inc                   ; yes             ; Auto-Found AHDL File         ; c:/users/никита/desktop/filters/bubblesort/bubbleSort.inc         ;
+; bubbleSort.tdf                   ; yes             ; Auto-Found AHDL File         ; c:/users/никита/desktop/filters/bubblesort/bubbleSort.tdf         ;
+; altshift_taps.tdf                ; yes             ; Megafunction                 ; g:/quartus/quar/quartus/libraries/megafunctions/altshift_taps.tdf ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; g:/quartus/quar/quartus/libraries/megafunctions/altdpram.inc      ;
+; lpm_counter.inc                  ; yes             ; Megafunction                 ; g:/quartus/quar/quartus/libraries/megafunctions/lpm_counter.inc   ;
+; lpm_compare.inc                  ; yes             ; Megafunction                 ; g:/quartus/quar/quartus/libraries/megafunctions/lpm_compare.inc   ;
+; lpm_constant.inc                 ; yes             ; Megafunction                 ; g:/quartus/quar/quartus/libraries/megafunctions/lpm_constant.inc  ;
+; db/shift_taps_q1m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Никита/Desktop/filters/median/db/shift_taps_q1m.tdf      ;
+; db/altsyncram_hg31.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Никита/Desktop/filters/median/db/altsyncram_hg31.tdf     ;
+; db/add_sub_gvd.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Никита/Desktop/filters/median/db/add_sub_gvd.tdf         ;
+; db/cntr_kkf.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Никита/Desktop/filters/median/db/cntr_kkf.tdf            ;
+; db/cmpr_6cc.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Никита/Desktop/filters/median/db/cmpr_6cc.tdf            ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 92    ;
+;                                             ;       ;
+; Total combinational functions               ; 59    ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 2     ;
+;     -- 3 input functions                    ; 48    ;
+;     -- <=2 input functions                  ; 9     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 25    ;
+;     -- arithmetic mode                      ; 34    ;
+;                                             ;       ;
+; Total registers                             ; 92    ;
+;     -- Dedicated logic registers            ; 92    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 17    ;
+; Total memory bits                           ; 48    ;
+; Maximum fan-out node                        ; clock ;
+; Maximum fan-out                             ; 108   ;
+; Total fan-out                               ; 510   ;
+; Average fan-out                             ; 2.77  ;
++---------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                    ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                             ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |medianFilter                             ; 59 (0)            ; 92 (32)      ; 48          ; 0            ; 0       ; 0         ; 17   ; 0            ; |medianFilter                                                                                                                   ; work         ;
+;    |bubbleSort:sorters[0]|                ; 41 (34)           ; 36 (32)      ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |medianFilter|bubbleSort:sorters[0]                                                                                             ; work         ;
+;       |altshift_taps:outputTrigger_rtl_0| ; 7 (0)             ; 4 (0)        ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |medianFilter|bubbleSort:sorters[0]|altshift_taps:outputTrigger_rtl_0                                                           ; work         ;
+;          |shift_taps_q1m:auto_generated|  ; 7 (2)             ; 4 (2)        ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |medianFilter|bubbleSort:sorters[0]|altshift_taps:outputTrigger_rtl_0|shift_taps_q1m:auto_generated                             ; work         ;
+;             |altsyncram_hg31:altsyncram4| ; 0 (0)             ; 0 (0)        ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |medianFilter|bubbleSort:sorters[0]|altshift_taps:outputTrigger_rtl_0|shift_taps_q1m:auto_generated|altsyncram_hg31:altsyncram4 ; work         ;
+;             |cntr_kkf:cntr1|              ; 5 (5)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |medianFilter|bubbleSort:sorters[0]|altshift_taps:outputTrigger_rtl_0|shift_taps_q1m:auto_generated|cntr_kkf:cntr1              ; work         ;
+;    |bubbleSort:sorters[1]|                ; 18 (18)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |medianFilter|bubbleSort:sorters[1]                                                                                             ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                 ;
++------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                                         ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; bubbleSort:sorters[0]|altshift_taps:outputTrigger_rtl_0|shift_taps_q1m:auto_generated|altsyncram_hg31:altsyncram4|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 3            ; 16           ; 3            ; 16           ; 48   ; None ;
++------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                     ;
++------------------------------------------+-----------------------------+
+; Register name                            ; Reason for Removal          ;
++------------------------------------------+-----------------------------+
+; bubbleSort:sorters[0]|inputTrigger[1][7] ; Merged with shift_reg[2][7] ;
+; bubbleSort:sorters[0]|inputTrigger[1][6] ; Merged with shift_reg[2][6] ;
+; bubbleSort:sorters[0]|inputTrigger[1][5] ; Merged with shift_reg[2][5] ;
+; bubbleSort:sorters[0]|inputTrigger[1][4] ; Merged with shift_reg[2][4] ;
+; bubbleSort:sorters[0]|inputTrigger[1][3] ; Merged with shift_reg[2][3] ;
+; bubbleSort:sorters[0]|inputTrigger[1][2] ; Merged with shift_reg[2][2] ;
+; bubbleSort:sorters[0]|inputTrigger[1][1] ; Merged with shift_reg[2][1] ;
+; bubbleSort:sorters[0]|inputTrigger[1][0] ; Merged with shift_reg[2][0] ;
+; bubbleSort:sorters[0]|inputTrigger[0][7] ; Merged with shift_reg[1][7] ;
+; bubbleSort:sorters[0]|inputTrigger[0][6] ; Merged with shift_reg[1][6] ;
+; bubbleSort:sorters[0]|inputTrigger[0][5] ; Merged with shift_reg[1][5] ;
+; bubbleSort:sorters[0]|inputTrigger[0][4] ; Merged with shift_reg[1][4] ;
+; bubbleSort:sorters[0]|inputTrigger[0][3] ; Merged with shift_reg[1][3] ;
+; bubbleSort:sorters[0]|inputTrigger[0][2] ; Merged with shift_reg[1][2] ;
+; bubbleSort:sorters[0]|inputTrigger[0][1] ; Merged with shift_reg[1][1] ;
+; bubbleSort:sorters[0]|inputTrigger[0][0] ; Merged with shift_reg[1][0] ;
+; Total Number of Removed Registers = 16   ;                             ;
++------------------------------------------+-----------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 92    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 32    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for bubbleSort:sorters[0]|altshift_taps:outputTrigger_rtl_0|shift_taps_q1m:auto_generated|altsyncram_hg31:altsyncram4 ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                         ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                          ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |medianFilter ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; WIDTH          ; 3     ; Untyped                                             ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bubbleSort:sorters[2] ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; WIDTH          ; 3     ; Untyped                                   ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bubbleSort:sorters[1] ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; WIDTH          ; 3     ; Untyped                                   ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bubbleSort:sorters[0] ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; WIDTH          ; 3     ; Untyped                                   ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: bubbleSort:sorters[0]|altshift_taps:outputTrigger_rtl_0 ;
++----------------+----------------+------------------------------------------------------------------------+
+; Parameter Name ; Value          ; Type                                                                   ;
++----------------+----------------+------------------------------------------------------------------------+
+; WIDTH_BYTEENA  ; 1              ; Untyped                                                                ;
+; NUMBER_OF_TAPS ; 1              ; Untyped                                                                ;
+; TAP_DISTANCE   ; 3              ; Untyped                                                                ;
+; WIDTH          ; 16             ; Untyped                                                                ;
+; POWER_UP_STATE ; CLEARED        ; Untyped                                                                ;
+; CBXI_PARAMETER ; shift_taps_q1m ; Untyped                                                                ;
++----------------+----------------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; altshift_taps Parameter Settings by Entity Instance                                  ;
++----------------------------+---------------------------------------------------------+
+; Name                       ; Value                                                   ;
++----------------------------+---------------------------------------------------------+
+; Number of entity instances ; 1                                                       ;
+; Entity Instance            ; bubbleSort:sorters[0]|altshift_taps:outputTrigger_rtl_0 ;
+;     -- NUMBER_OF_TAPS      ; 1                                                       ;
+;     -- TAP_DISTANCE        ; 3                                                       ;
+;     -- WIDTH               ; 16                                                      ;
++----------------------------+---------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 8.1 Build 163 10/28/2008 SJ Full Version
+    Info: Processing started: Wed Dec 26 13:48:58 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off medianFilter -c medianFilter
+Info: Found 1 design units, including 1 entities, in source file medianFilter.tdf
+    Info: Found entity 1: medianFilter
+Info: Elaborating entity "medianFilter" for the top level hierarchy
+Warning: Result of division operation "3/2" contains a remainder -- truncated result
+Warning: Using design file ../../../../никита/desktop/filters/bubblesort/bubbleSort.tdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: bubbleSort
+Info: Elaborating entity "bubbleSort" for hierarchy "bubbleSort:sorters[2]"
+Warning: Result of division operation "3/2" contains a remainder -- truncated result
+Warning: Result of division operation "3/2" contains a remainder -- truncated result
+Info: Elaborating entity "bubbleSort" for hierarchy "bubbleSort:sorters[1]"
+Warning: Result of division operation "3/2" contains a remainder -- truncated result
+Warning: Result of division operation "3/2" contains a remainder -- truncated result
+Info: Inferred 1 megafunctions from design logic
+    Info: Inferred altshift_taps megafunction from the following design logic: "bubbleSort:sorters[0]|outputTrigger[2][0]~128"
+        Info: Parameter NUMBER_OF_TAPS set to 1
+        Info: Parameter TAP_DISTANCE set to 3
+        Info: Parameter WIDTH set to 16
+Info: Elaborated megafunction instantiation "bubbleSort:sorters[0]|altshift_taps:outputTrigger_rtl_0"
+Info: Instantiated megafunction "bubbleSort:sorters[0]|altshift_taps:outputTrigger_rtl_0" with the following parameter:
+    Info: Parameter "NUMBER_OF_TAPS" = "1"
+    Info: Parameter "TAP_DISTANCE" = "3"
+    Info: Parameter "WIDTH" = "16"
+Info: Found 1 design units, including 1 entities, in source file db/shift_taps_q1m.tdf
+    Info: Found entity 1: shift_taps_q1m
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_hg31.tdf
+    Info: Found entity 1: altsyncram_hg31
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_gvd.tdf
+    Info: Found entity 1: add_sub_gvd
+Info: Found 1 design units, including 1 entities, in source file db/cntr_kkf.tdf
+    Info: Found entity 1: cntr_kkf
+Info: Found 1 design units, including 1 entities, in source file db/cmpr_6cc.tdf
+    Info: Found entity 1: cmpr_6cc
+Info: Implemented 149 device resources after synthesis - the final resource count might be different
+    Info: Implemented 9 input pins
+    Info: Implemented 8 output pins
+    Info: Implemented 116 logic cells
+    Info: Implemented 16 RAM segments
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 253 megabytes
+    Info: Processing ended: Wed Dec 26 13:49:01 2018
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

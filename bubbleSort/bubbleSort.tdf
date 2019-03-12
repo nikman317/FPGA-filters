@@ -1,0 +1,53 @@
+Title "bubbleSort";
+
+PARAMETERS
+(
+	WIDTH = 3
+);
+
+SUBDESIGN bubbleSort(
+inputData[width-1..0][7..0]				: input;
+outputData[width-1..0][7..0]			: output;
+clock 									: input;
+)
+
+
+variable
+	temp[width-1..0][7..0] : DFF;
+	inputTrigger[width-1..0][7..0] : DFF;
+	outputTrigger[width-1..0][7..0] : DFF;
+	
+	
+Begin
+
+
+inputTrigger[][].clk = clock;
+inputTrigger[][].d = inputData[][];
+outputTrigger[][].clk = clock;
+outputData[][] = outputTrigger[][].q ;
+
+temp[][].clk = clock;
+
+for i in 0 to (WIDTH div 2 - 1) generate
+	if (inputTrigger[i*2+1][] > inputTrigger[i*2][]) then
+		temp[i*2][].d = inputTrigger[i*2][].q;
+		temp[i*2+1][].d = inputTrigger[i*2+1][].q;
+	else
+		temp[i*2][].d = inputTrigger[i*2+1][].q;
+		temp[i*2+1][].d = inputTrigger[i*2][].q;
+	end if;
+end generate;
+temp[width-1][].d = inputTrigger[width-1][].q;
+
+for i in 1 to (WIDTH div 2) generate
+	if (temp[i*2][] > temp[i*2-1][]) then
+		outputTrigger[i*2][].d = temp[i*2][].q;
+		outputTrigger[i*2-1][].d = temp[i*2-1][].q;
+	else
+		outputTrigger[i*2][].d = temp[i*2-1][].q;
+		outputTrigger[i*2-1][].d = temp[i*2][].q;
+	end if;
+end generate;
+outputTrigger[0][].d = temp[0][].q;
+
+end;

@@ -1,0 +1,62 @@
+Title "filterLF";
+
+PARAMETERS
+(
+	WIDTH = 4
+);
+
+constant shift = log2(width);
+
+SUBDESIGN filterLF(
+inputData[7..0]				: input;
+clock						: input;
+outputData[7..0]			: output;
+--temp[15..0]					: output;
+--tempp[15..0]					: output;
+--temppp[15..0]					: output;
+)
+
+
+variable
+	shift_reg[width..0][7..0] : DFF;
+	--first_reg[15..0] : DFF;
+	--last_reg[15..0] : DFF;
+	
+	output_trigger[7..0]: DFF;
+	sum[15..0] : DFF;
+	
+
+Begin
+
+--last_reg[].clk = clock;
+--first_reg[].clk = clock;
+shift_reg[][].clk = clock;
+sum[].clk = clock;
+
+
+--first_reg[15..0].d = GND;
+--first_reg[7..0].d = inputData[7..0];
+
+
+shift_reg[0][].d = inputData[7..0];
+for j in 1 to width generate
+		shift_reg[j][].d = shift_reg[j-1][].q;
+end generate;
+
+--last_reg[15..0].d = GND;
+--last_reg[7..0].d = shift_reg[width-1][7..0].q;
+
+sum[].d = sum[].q + (H"00",shift_reg[0][]) - (H"00",shift_reg[width][]); 
+
+--temp[] = sum[].q;
+--tempp[] = first_reg[].q;
+--temppp[] = last_reg[].q;
+
+
+output_trigger[].clk = clock;
+output_trigger[7..0].d = sum[7+shift..0+shift].q;
+--output_trigger[].d = shift_reg[width-1][].q;
+outputData[] = output_trigger[].q;
+	
+
+End;
